@@ -1,0 +1,11 @@
+.recurso > summary { display: block; list-style: none; cursor: pointer; }
+.recurso > summary::-webkit-details-marker { display: none; }
+.recurso summary h2 { margin: .3rem 0 .65rem; }
+.recurso .abre { display: block; margin-top: .8rem; color: var(--rojo); font: .82rem var(--mano); font-weight: 700; }
+.recurso[open] { outline: 2px solid var(--salvia); outline-offset: 3px; }
+.recurso[open] .abre { display: none; }
+.recurso > p { margin-top: .7rem; }
+.recurso > a { display: inline-block; margin: .7rem .7rem 0 0; color: var(--vino); font-weight: 700; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.recurso > small { display: block; margin-top: .7rem; color: #725b54; }
+.recurso-accion { min-height: 44px; padding: .65rem 1rem; border-radius: 999px; color: var(--crema) !important; background: var(--vino); text-decoration: none; }
+.recurso-accion:hover { background: var(--rojo); }

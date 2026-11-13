@@ -1,0 +1,64 @@
+/* Laboratorio de procesos cognitivos */
+.mapa-cognitivo, .clasificador { margin: 3rem 0; }
+.mapa-procesos { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: .85rem; }
+.mapa-procesos article { padding: 1.1rem; background: var(--papel); border: 1px solid #dfcfba; border-radius: 8px 24px 10px 18px; box-shadow: 0 6px 16px rgba(85,20,31,.08); }
+.mapa-procesos article:nth-child(2) { background: #f7e4e6; }
+.mapa-procesos article:nth-child(3) { background: #e6ead6; }
+.mapa-procesos article:nth-child(4) { background: #e6eaf2; }
+.mapa-procesos article > span { color: var(--rojo); font: .68rem var(--mano); letter-spacing: .08em; }
+.mapa-procesos h3 { margin: .35rem 0; color: var(--vino); font: 1.25rem var(--serif); }
+.mapa-procesos p, .lab-intro { color: #604d4c; font-size: .95rem; }
+.lab-intro { max-width: 70ch; margin: 0 0 1.2rem; }
+.juego-marco { padding: clamp(1rem,4vw,2rem); border: 1px solid #dfcfba; border-radius: 14px 38px 16px 28px; background: var(--papel); box-shadow: 0 10px 28px rgba(85,20,31,.1); }
+.juego-cabecera { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; color: var(--rojo); font: .8rem var(--mano); font-weight: 700; }
+.juego-cabecera progress { width: min(45%, 260px); height: .7rem; accent-color: var(--rojo); }
+.afirmacion { display: grid; gap: .5rem; min-height: 150px; padding: clamp(1.2rem,4vw,2rem); border: 2px dashed #b89a84; border-radius: 12px 34px 14px 24px; background: #fffdf6; color: var(--vino); cursor: grab; }
+.afirmacion:focus-visible { outline: 3px solid var(--rojo); outline-offset: 4px; }
+.afirmacion-etiqueta, .afirmacion-pista { color: var(--rojo); font: .7rem var(--mano); font-weight: 700; letter-spacing: .07em; }
+#afirmacion-texto { font: clamp(1.35rem,3vw,2rem)/1.3 var(--serif); font-weight: 700; }
+.afirmacion-pista { color: #725b54; letter-spacing: 0; }
+.ayuda-arrastre { margin: .7rem 0 1rem; color: #725b54; font-size: .82rem; }
+.categorias { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .8rem; }
+.categoria { display: flex; align-items: flex-start; gap: .8rem; min-height: 78px; padding: .85rem; border: 1px solid #cbb7a7; border-radius: 10px 20px 10px 16px; color: var(--vino); text-align: left; background: #fbf0d6; cursor: pointer; transition: transform .15s ease, box-shadow .15s ease; }
+.categoria:hover, .categoria:focus-visible { transform: translateY(-2px); box-shadow: 0 6px 15px rgba(85,20,31,.13); }
+.categoria:disabled { cursor: default; opacity: .82; }
+.categoria-numero { color: var(--rojo); font: 1.2rem var(--script); }
+.categoria strong, .categoria small { display: block; }
+.categoria small { margin-top: .25rem; color: #604d4c; line-height: 1.35; }
+.categoria.correcta { border: 2px solid #52643b; background: #edf0df; }
+.categoria.incorrecta { border: 2px solid #b8233b; background: #f7d6dd; }
+.respuesta-juego, .resultado-clasificador { margin-top: 1rem; padding: 1rem 1.2rem; border-left: 4px solid var(--salvia); background: #edf0df; color: var(--tinta); }
+.respuesta-juego > strong, .resultado-clasificador h3 { display: block; margin-bottom: .4rem; color: var(--vino); font: 1.3rem var(--serif); }
+.respuesta-juego p + p, .resultado-clasificador p { margin-top: .6rem; }
+.proceso-juego, .limite-clasificador { color: #52643b; font-weight: 700; }
+.boton-siguiente { margin-top: 1rem; }
+.resultado-final { margin-top: 1rem; padding: 1.5rem; border-radius: 10px 28px; background: #f7e4e6; }
+.resultado-final:focus { outline: none; }
+.resultado-final h3 { color: var(--vino); font: 1.8rem var(--serif); }
+.sello-resultado { color: var(--rojo); font: .75rem var(--mano); font-weight: 700; letter-spacing: .1em; }
+.form-clasificador { padding: 1.2rem; border-radius: 12px 28px; background: var(--papel); border: 1px solid #dfcfba; }
+.form-clasificador label { display: block; margin-bottom: .4rem; color: var(--vino); font-weight: 700; }
+.form-clasificador textarea { display: block; width: 100%; resize: vertical; padding: .85rem; border: 1px solid #b89a84; border-radius: 6px 16px; color: var(--tinta); background: #fffdf6; font: inherit; }
+.form-acciones { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: .7rem; }
+.form-acciones > span { color: #725b54; font-size: .78rem; }
+.ejemplos-clasificador { display: flex; flex-wrap: wrap; align-items: center; gap: .45rem; margin: .8rem 0; color: #604d4c; font-size: .85rem; }
+.ejemplos-clasificador button { padding: .35rem .6rem; border: 1px dashed #a9827b; border-radius: 999px; color: var(--vino); background: #fffaf0; cursor: pointer; }
+.ejemplos-clasificador button:hover { background: #f7d6dd; }
+.resultado-clasificador ul { padding-left: 1.3rem; }
+.resultado-clasificador li { margin: .5rem 0; }
+.nota-inferior { margin-top: 1.4rem; }
+@media (max-width: 800px) { .mapa-procesos { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media (max-width: 600px) { .categorias { grid-template-columns: 1fr; } .juego-cabecera { align-items: flex-start; flex-direction: column; } .juego-cabecera progress { width: 100%; } .mapa-procesos { grid-template-columns: 1fr; } .form-acciones { align-items: flex-start; flex-direction: column; } }
+@media (prefers-reduced-motion: reduce) { .categoria { transition: none; } .categoria:hover, .categoria:focus-visible { transform: none; } }
+.afirmacion { display: grid; grid-template-columns: minmax(90px,150px) 1fr; align-items: center; gap: .75rem 1rem; min-height: 200px; padding: clamp(1.1rem,3vw,1.8rem); border: 2px dashed #b89a84; border-radius: 12px 34px 14px 24px; background: #fffdf6; color: var(--vino); cursor: grab; }
+.afirmacion-etiqueta, .afirmacion-pista, .afirmacion-evidencia { grid-column: 1 / -1; }
+.afirmacion-imagen { grid-column: 1; grid-row: 2 / span 2; width: 100%; height: 130px; border: 5px solid var(--papel); object-fit: cover; transform: rotate(-1deg); }
+#afirmacion-texto { grid-column: 2; font: clamp(1.25rem,2.4vw,1.85rem)/1.25 var(--serif); font-weight: 700; }
+.afirmacion-evidencia { padding: .45rem .7rem; color: #52643b; background: #edf0df; font: .82rem var(--mano); font-weight: 700; }
+.afirmacion-pista { grid-column: 1 / -1; color: #725b54; font: .75rem var(--mano); }
+.categorias { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: .8rem; }
+.categoria { min-height: 110px; }
+.respuesta-juego > .sello-correcto, .respuesta-juego > .sello-revision { display: inline-block; margin-bottom: .55rem; padding: .35rem .55rem; border: 2px solid currentColor; color: #52643b; font: .82rem var(--mano); font-weight: 700; transform: rotate(-1deg); }
+.respuesta-juego > .sello-revision { color: var(--rojo); }
+@media (max-width: 760px) { .categorias { grid-template-columns: 1fr; }.categoria { min-height: 80px; } }
+@media (max-width: 600px) { .afirmacion { grid-template-columns: 1fr; }.afirmacion-imagen { grid-column: 1; grid-row: auto; width: 100%; height: 170px; } #afirmacion-texto { grid-column: 1; } }

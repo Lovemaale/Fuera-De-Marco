@@ -1,0 +1,11 @@
+.manifiesto { margin: 3rem 0 1rem; padding: clamp(1.4rem,4vw,2.4rem); border: 2px solid var(--vino); border-radius: 18px 42px 18px 36px; background: #fffaf0; box-shadow: 0 12px 30px rgba(85,20,31,.12); }
+.manifiesto h2 { margin: .35rem 0; color: var(--vino); font: clamp(1.8rem,4vw,3rem)/1.1 var(--serif); }.manifiesto > p { max-width: 65ch; }
+.frases-manifiesto { display: flex; flex-wrap: wrap; gap: .55rem; margin: 1rem 0; }
+.frases-manifiesto button { min-height: 44px; padding: .65rem .85rem; border: 1px solid var(--vino); border-radius: 999px; color: var(--vino); background: var(--papel); cursor: pointer; }
+.frases-manifiesto button[aria-pressed="true"] { color: var(--papel); background: var(--vino); }
+.pared-manifiesto { display: flex; flex-wrap: wrap; align-items: flex-start; gap: .5rem; min-height: 120px; margin: 1rem 0; padding: 1rem; border: 1px dashed #a9827b; background-color: #f7e4e6; background-image: radial-gradient(#d8bfc0 1px,transparent 1px); background-size: 18px 18px; }
+.huella-frase { padding: .5rem .7rem; color: var(--vino); background: var(--mantequilla); font: 1rem var(--mano); transform: rotate(-2deg); }
+.marca-huella { max-width: 220px; padding: .6rem .75rem; border: 1px solid #c9b6a7; color: var(--vino); background: #fffaf0; box-shadow: 0 4px 8px rgba(85,20,31,.14); font: .85rem/1.25 var(--mano); animation: estampa .25s ease-out; transform: rotate(var(--giro)); }
+.contador-huellas { margin-top: .7rem; color: var(--rojo); font: 1rem var(--mano); font-weight: 700; }.privacidad-huellas { margin-top: .3rem; color: #725b54; font-size: .78rem; }
+@keyframes estampa { from { opacity: 0; scale: 1.3; } to { opacity: 1; scale: 1; } }
+@media (prefers-reduced-motion: reduce) { .marca-huella { animation: none; } }

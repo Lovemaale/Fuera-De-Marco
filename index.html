@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbf0d6">
+  <meta name="description" content="Una exposición digital para mirar de nuevo los ideales de belleza, las redes sociales y la percepción corporal.">
+  <title>FUERA DE MARCO — exposición para mirar de nuevo</title>
+  <link rel="stylesheet" href="css/Style.css">
+</head>
+<body>
+
+  <p class="aviso-top">Exposición digital · entrada libre · todas las publicaciones son ficticias</p>
+
+  <a class="salto" href="#salas">Saltar a la exposición</a>
+  <nav class="nav" aria-label="Navegación principal">
+    <a class="logo" href="index.html">Fuera de Marco</a>
+    <a href="feed.html">Feed</a>
+    <a href="museo.html">Museo</a>
+    <a href="cuerpo.html">Cuerpo</a>
+    <a href="foro.html">Foro</a>
+    <a href="laboratorio.html">Laboratorio</a>
+    <a href="espejo.html">Espejo</a>
+    <a href="recursos.html">Recursos</a>
+  <button class="nav-fullscreen" id="modo-exposicion" type="button" aria-label="Activar pantalla completa">Modo feria ⛶</button></nav>
+
+  <header class="portada lunares">
+    <div class="portada-grid">
+      <div>
+        <h1 class="titular">¿Quién te enseñó a <em>mirarte</em> así?</h1>
+        <p class="entrada">Antes de que aprendieras a juzgar tu cuerpo, alguien ya había decidido qué cuerpos debían ser admirados.</p>
+        <button class="btn boton-entrada" id="abrir-exposicion" type="button" aria-controls="salas" aria-expanded="false">
+          Abrir la exposición <span aria-hidden="true">↘</span>
+        </button>
+        <p class="lema-portada">«No todo lo que ves es real. No todo lo que parece perfecto es saludable».</p>
+      </div>
+
+      <div class="collage">
+        <figure class="foto">
+          <img src="assets/cara%20dividida.png" alt="Retrato artístico de una mujer con flores sobre el rostro, una imagen que juega con los ideales de belleza">
+          <figcaption class="foto-etiqueta">archivo visual · pieza 01</figcaption>
+        </figure>
+        <div class="cuaderno"><span class="cinta-adhesiva"></span>«¿Te gusta o aprendiste que deberías gustarte?»</div>
+        <p class="nota">editado, filtrado, seleccionado</p>
+                <span class="collage-sello" aria-hidden="true">mirar<br>de nuevo</span>
+        <span class="collage-sticker sticker-filtro" aria-hidden="true">FILTRO ≠ VERDAD</span>
+        <span class="collage-sticker sticker-ganancia" aria-hidden="true">¿QUIÉN GANA?</span>
+        <a class="recorte-sala recorte-feed" href="feed.html"><img src="assets/estereotipos.jpg" alt=""><span>ver el feed ↗</span></a>
+        <a class="recorte-sala recorte-museo" href="museo.html"><img src="assets/arquitectura.jpg" alt=""><span>entrar al museo ↗</span></a>
+        <a class="recorte-sala recorte-lab" href="laboratorio.html"><img src="assets/telefono.jpg" alt=""><span>probar el laboratorio ↗</span></a>
+      </div>
+    </div>
+  </header>
+
+  <div class="cinta" aria-hidden="true">
+    <span>No todo lo que ves es real ✿ No todo lo que parece perfecto es saludable ✿ No todo lo que ves es real ✿ No todo lo que parece perfecto es saludable ✿ No todo lo que ves es real ✿ No todo lo que parece perfecto es saludable ✿&nbsp;</span>
+  </div>
+  <div class="rayas" aria-hidden="true"></div>
+
+  <main>
+    <section class="archivo-visual" aria-labelledby="archivo-titulo">
+      <header class="archivo-cabecera">
+        <p class="archivo-indice">ARCHIVO VISUAL · 01—04</p>
+        <h2 id="archivo-titulo">El mundo también nos enseña a mirar</h2>
+        <p>Imágenes para observar con curiosidad, no para compararnos.</p>
+      </header>
+      <div class="archivo-grid">
+        <a class="archivo-pieza archivo-pieza-alta" href="feed.html">
+          <img src="assets/concepto%20general.jpg" alt="Ilustración editorial de un rostro rodeado de recortes, etiquetas y anotaciones">
+          <span class="archivo-caption"><span>01 / Pantallas</span>Lo que vemos, lo que se queda fuera ↗</span>
+        </a>
+        <a class="archivo-pieza archivo-pieza-baja" href="museo.html">
+          <img src="assets/arquitectura.jpg" alt="Collage de una fachada histórica en blanco y negro rodeada de flores de colores">
+          <span class="archivo-caption"><span>02 / Archivo</span>La belleza también tiene historia ↗</span>
+        </a>
+        <a class="archivo-pieza archivo-pieza-alta" href="laboratorio.html">
+          <img src="assets/telefono.jpg" alt="Ilustración de una persona frente a varias pantallas de redes sociales">
+          <span class="archivo-caption"><span>03 / Algoritmos</span>¿Quién elige el encuadre? ↗</span>
+        </a>
+        <a class="archivo-pieza archivo-pieza-baja" href="cuerpo.html">
+          <img src="assets/personasdistintas.jpg" alt="Retrato colectivo de personas diversas mirando a cámara">
+          <span class="archivo-caption"><span>04 / Diversidad</span>Ningún cuerpo cuenta toda la historia ↗</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="procesos-home" aria-labelledby="procesos-titulo">
+      <div class="procesos-home-cabecera">
+        <p class="archivo-indice">UNA LECTURA DESDE PROCESOS COGNITIVOS</p>
+        <h2 id="procesos-titulo">La mente también está en la sala</h2>
+        <p>La exposición observa cómo atendemos, comparamos, aprendemos patrones y revisamos lo que pensamos.</p>
+      </div>
+      <div class="procesos-home-grid">
+        <article><span>01 / FOCO</span><h3>Atención selectiva</h3><p>¿Qué detalle atrapa la mirada y qué contexto queda fuera?</p></article>
+        <article><span>02 / MEDIDA</span><h3>Comparación social</h3><p>¿Con quién nos comparamos y qué tan justa es esa referencia?</p></article>
+        <article><span>03 / APRENDIZAJE</span><h3>Esquemas y creencias</h3><p>¿Cuándo una idea repetida empieza a sentirse como una regla?</p></article>
+        <article><span>04 / PAUSA</span><h3>Metacognición</h3><p>¿Podemos observar un pensamiento y preguntar de dónde viene?</p></article>
+      </div>
+      <a class="enlace-laboratorio" href="laboratorio.html">Probar el laboratorio cognitivo ↗</a>
+    </section>
+    <section id="salas" class="exposicion">
+      <p class="archivo-indice">EL RECORRIDO · 6 SALAS</p>
+      <h2>Entra por donde te haga <em>ruido</em></h2>
+
+      <div class="salas">
+        <a class="sala s1" href="feed.html"><h3>El feed que nos construye</h3><p>Analiza publicaciones ficticias.</p><span class="sala-flecha">explorar ↗</span></a>
+        <a class="sala s2" href="museo.html"><h3>El museo de la belleza</h3><p>Cómo cambian los ideales según la época.</p><span class="sala-flecha">explorar ↗</span></a>
+        <a class="sala s3" href="cuerpo.html"><h3>El cuerpo como territorio</h3><p>Quién produce los estándares y quién gana.</p><span class="sala-flecha">explorar ↗</span></a>
+        <a class="sala s4" href="foro.html"><h3>La conversación incómoda</h3><p>Debates con varias perspectivas.</p><span class="sala-flecha">explorar ↗</span></a>
+        <a class="sala s5" href="laboratorio.html"><h3>Laboratorio de pensamiento crítico</h3><p>Experimentos para cuestionar mensajes.</p><span class="sala-flecha">explorar ↗</span></a>
+        <a class="sala s6" href="espejo.html"><h3>Más allá del espejo</h3><p>Tu identidad no cabe en una fotografía.</p><span class="sala-flecha">explorar ↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    Proyecto educativo y preventivo. No diagnostica ni reemplaza atención profesional.
+    <a href="recursos.html">Recursos de ayuda</a>
+  </footer>
+
+  <script src="js/exposicion.js" defer></script>
+<script src="js/kiosco.js" defer></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#5a1026">
+  <title>Más allá del espejo · FUERA DE MARCO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/Style.css">
+  <link rel="stylesheet" href="css/manifiesto.css">
+</head>
+<body>
+  <a class="salto" href="#reflejos">Saltar a las preguntas</a>
+  <nav class="nav" aria-label="Navegación principal">
+    <a class="logo" href="index.html">FUERA DE MARCO</a>
+    <a href="feed.html">Feed</a><a href="museo.html">Museo</a><a href="cuerpo.html">Cuerpo</a>
+    <a href="foro.html">Foro</a><a href="laboratorio.html">Laboratorio</a>
+    <a class="activo" href="espejo.html" aria-current="page">Espejo</a><a href="recursos.html">Recursos</a>
+  <button class="nav-fullscreen" id="modo-exposicion" type="button" aria-label="Activar pantalla completa">Modo feria ⛶</button></nav>
+  <main class="contenido">
+    <header class="pagina-cabecera">
+      <span class="kicker">Sala 06 · Reflejos / Una pausa sin obligación</span>
+      <h1>Más allá del espejo</h1>
+      <p class="intro">No tienes que amar cada parte de ti todo el tiempo. Tu identidad, tus vínculos y lo que haces no caben en una fotografía.</p>
+      <span class="marca">NO ES UN RETO · NO HAY QUE COMPARTIR NADA</span>
+    </header>
+    <figure class="imagen-editorial">
+      <img src="assets/arteconceptual.png" alt="Collage de un rostro en blanco y negro con muchos ojos distintos superpuestos como espejo">
+      <figcaption>Una imagen contiene muchas miradas. Ninguna de ellas puede resumir quién eres.<span>Archivo visual · reflejos e identidad</span></figcaption>
+    </figure>
+    <section id="reflejos">
+      <div class="bloque-titulo"><span>PAUSA / 06</span><h2>Preguntas que no califican</h2></div>
+      <div class="tarjetas-editoriales">
+        <details class="pieza"><summary><p class="kicker">Fuera de cámara</p><h2>¿Qué te importa hoy?</h2><span class="abre">Haz una pausa y descubre +</span></summary><p>Piensa en algo que disfrutaste, aprendiste o hiciste por alguien. No tiene que ver con cómo te ves.</p></details>
+        <details class="pieza"><summary><p class="kicker">Tu propia voz</p><h2>¿Qué te gustaría escuchar?</h2><span class="abre">Toca para descubrir +</span></summary><p>Si quieres, imagina una frase amable o neutral que te gustaría recibir de alguien de confianza. No tienes que escribirla ni compartirla.</p></details>
+        <details class="pieza"><summary><p class="kicker">Límite</p><h2>¿Qué conversación necesitas pausar?</h2><span class="abre">Toca para descubrir +</span></summary><p>Puedes silenciar una cuenta, cambiar de tema o pedir que no comenten sobre tu cuerpo.</p></details>
+        <details class="pieza"><summary><p class="kicker">Recordatorio</p><h2>No le debes una imagen a nadie</h2><span class="abre">Toca para descubrir +</span></summary><p>Puedes participar, aparecer o no hacerlo. Tu valor no depende de una foto ni de una opinión sobre ella.</p></details>
+      </div>
+            <section class="manifiesto" aria-labelledby="manifiesto-titulo">
+        <p class="kicker">MANIFIESTO COLECTIVO · SIN NOMBRES</p>
+        <h2 id="manifiesto-titulo">La belleza cambia. Tu dignidad no.</h2>
+        <p>Elige una frase que quieras llevarte y deja una huella anónima en esta visita.</p>
+        <div class="frases-manifiesto" role="group" aria-label="Elige una frase del manifiesto">
+          <button type="button" aria-pressed="true">Mi cuerpo no es una tarea pendiente.</button>
+          <button type="button" aria-pressed="false">Puedo mirar con curiosidad, no compararme.</button>
+          <button type="button" aria-pressed="false">Ninguna imagen cuenta toda una vida.</button>
+        </div>
+        <div class="pared-manifiesto" id="pared-manifiesto"><span class="huella-frase" id="huella-frase">Mi cuerpo no es una tarea pendiente.</span></div>
+        <button class="btn" type="button" id="dejar-huella">Dejar mi huella ↗</button>
+        <p class="contador-huellas" id="contador-huellas" aria-live="polite">0 huellas en esta visita</p>
+        <p class="privacidad-huellas">No pedimos nombre ni guardamos la selección: el contador se reinicia al cerrar o recargar esta página.</p>
+      </section><aside class="nota-margen nota-inferior">Si estas preguntas despiertan malestar intenso, no tienes que atravesarlo a solas. Puedes cerrar esta página y buscar apoyo de una persona de confianza o de un profesional.</aside>
+    </section>
+  </main>
+  <footer class="pie"><span>Proyecto educativo y preventivo. No diagnostica ni reemplaza atención profesional.</span><a href="recursos.html">Recursos y apoyo</a></footer>
+  <script src="js/manifiesto.js" defer></script>
+<script src="js/kiosco.js" defer></script>
+</body>
+</html>
+
+

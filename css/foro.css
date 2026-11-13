@@ -1,0 +1,16 @@
+.totem { position: relative; margin: 2.5rem 0; padding: clamp(1.2rem,4vw,2.5rem); border: 2px solid var(--vino); border-radius: 18px 48px 20px 42px; background: #fffaf0; box-shadow: 0 15px 35px rgba(85,20,31,.15); }
+.totem::before { position: absolute; content: "PREGUNTA ABIERTA"; top: -14px; right: 2rem; padding: .25rem .65rem; background: var(--mantequilla); color: var(--vino); font: .72rem var(--mano); font-weight: 700; transform: rotate(2deg); }
+.totem-cabecera { display: flex; justify-content: space-between; gap: .5rem; color: var(--rojo); font: .75rem var(--mano); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.totem h2 { max-width: 22ch; margin: 1rem 0 1.4rem; color: var(--vino); font: clamp(1.8rem,4.5vw,3.2rem)/1.1 var(--serif); }
+.posturas { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: .8rem; }
+.postura { min-height: 140px; padding: 1rem; border: 1px solid #b89a84; border-radius: 12px 30px 12px 24px; color: var(--vino); text-align: left; background: #f7e4e6; cursor: pointer; transition: transform .18s ease, box-shadow .18s ease; }
+.postura:nth-child(2) { background: #e6eaf2; }.postura:nth-child(3) { background: #e6ead6; }
+.postura:hover, .postura.seleccionada { transform: translateY(-4px) rotate(-1deg); box-shadow: 0 10px 20px rgba(85,20,31,.17); }
+.postura span { display: block; margin-bottom: .8rem; color: var(--rojo); font: 1.5rem var(--script); }.postura strong { font: 1.25rem/1.2 var(--serif); }
+.resultado-postura { margin: 1.2rem 0; padding: 1.2rem; border-left: 5px solid var(--salvia); background: #edf0df; animation: respuesta-entra .25s ease-out; }
+.resultado-postura h3 { color: var(--vino); font: 1.4rem var(--serif); }.resultado-postura p { margin-top: .55rem; }.tension-postura { color: #604d4c; font-style: italic; }
+.barra-perspectiva { height: 14px; margin-top: 1rem; overflow: hidden; border-radius: 99px; background: #dfcfba; }.barra-perspectiva span { display: block; height: 100%; border-radius: inherit; background: repeating-linear-gradient(135deg,var(--vino) 0 8px,var(--rojo) 8px 16px); transition: width .45s cubic-bezier(.2,.8,.2,1); }
+.nota-grafico { margin: .65rem 0 1.2rem; color: #725b54; font-size: .78rem; }
+@keyframes respuesta-entra { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+@media(max-width:700px) { .posturas { grid-template-columns: 1fr; }.postura { min-height: 92px; } }
+@media(prefers-reduced-motion: reduce) { .postura,.resultado-postura,.barra-perspectiva span { transition: none; animation: none; } }

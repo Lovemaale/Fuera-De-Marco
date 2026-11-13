@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbf0d6">
+  <meta name="description" content="Un laboratorio interactivo para reconocer comparación social, atención selectiva y mensajes comerciales en discursos sobre la apariencia.">
+  <title>Laboratorio de mirada crítica · FUERA DE MARCO</title>
+  <link rel="stylesheet" href="css/Style.css">
+  <link rel="stylesheet" href="css/lab.css">
+</head>
+<body>
+  <a class="salto" href="#experimento">Saltar al experimento</a>
+  <nav class="nav" aria-label="Navegación principal">
+    <a class="logo" href="index.html">FUERA DE MARCO</a>
+    <a href="feed.html">Feed</a><a href="museo.html">Museo</a><a href="cuerpo.html">Cuerpo</a>
+    <a href="foro.html">Foro</a><a class="activo" href="laboratorio.html" aria-current="page">Laboratorio</a>
+    <a href="espejo.html">Espejo</a><a href="recursos.html">Recursos</a>
+  <button class="nav-fullscreen" id="modo-exposicion" type="button" aria-label="Activar pantalla completa">Modo feria ⛶</button></nav>
+  <main class="contenido">
+    <header class="pagina-cabecera">
+      <span class="kicker">Sala 05 · Cognición / Experimentos para leer mensajes</span>
+      <h1>Laboratorio de mirada crítica</h1>
+      <p class="intro">Pon a prueba cómo reconoces una comparación, una norma o una promesa comercial. Luego observa qué pistas encontró un clasificador sencillo.</p>
+      <span class="marca">NO HAY RESPUESTAS SOBRE TI · ANALIZAMOS MENSAJES</span>
+    </header>
+    <figure class="imagen-editorial laboratorio-imagen">
+      <img src="assets/arte.png" alt="Ilustración crítica de un rostro rodeado por iconos y pantallas de redes sociales">
+      <figcaption>Una imagen también es un argumento: busca la promesa, la emoción y aquello que quedó fuera.<span>Archivo visual · hábitos digitales</span></figcaption>
+    </figure>
+
+    <section class="mapa-cognitivo" aria-labelledby="mapa-titulo">
+      <div class="bloque-titulo"><span>MAPA / 01</span><h2 id="mapa-titulo">¿Qué hace la mente al mirar?</h2></div>
+      <div class="mapa-procesos">
+        <article><span>01 · ATENCIÓN</span><h3>Selecciona</h3><p>Un detalle llamativo puede ocupar el primer plano y desplazar el contexto.</p></article>
+        <article><span>02 · COMPARACIÓN</span><h3>Se mide</h3><p>Comparamos nuestra vida completa con una imagen elegida y editada.</p></article>
+        <article><span>03 · ESQUEMAS</span><h3>Aprende patrones</h3><p>La repetición puede hacer que una norma cultural parezca natural.</p></article>
+        <article><span>04 · METACOGNICIÓN</span><h3>Toma distancia</h3><p>Preguntamos de dónde viene una idea y qué evidencia la sostiene.</p></article>
+      </div>
+    </section>
+
+    <section id="experimento" class="experimento" aria-labelledby="experimento-titulo">
+      <div class="bloque-titulo"><span>JUEGO / 02</span><h2 id="experimento-titulo">Clasifica el mensaje</h2></div>
+      <p class="lab-intro">Toca una categoría o arrastra la afirmación hasta ella. El sello aparece al instante y revela qué pista ayudó a clasificarla.</p>
+      <div class="juego-marco" id="juego-marco">
+        <div class="juego-cabecera">
+          <p class="juego-contador" id="juego-contador" aria-live="polite">TARJETA 1 / 6</p>
+          <progress id="juego-progreso" max="6" value="0" aria-label="Progreso del ejercicio">0 de 6</progress>
+        </div>
+        <div class="afirmacion" id="afirmacion" tabindex="0" role="button" aria-describedby="ayuda-arrastre" draggable="true">
+          <span class="afirmacion-etiqueta">MENSAJE ENCONTRADO · FICTICIO</span>
+          <img class="afirmacion-imagen" id="afirmacion-imagen" alt="" src="assets/consumismo.jpg">
+          <span id="afirmacion-texto"></span>
+          <span class="afirmacion-evidencia" id="afirmacion-evidencia" hidden></span>
+          <span class="afirmacion-pista">Arrastra o elige una categoría</span>
+        </div>
+        <p class="ayuda-arrastre" id="ayuda-arrastre">En pantalla táctil: toca una categoría. Con teclado: usa Tab y pulsa Enter o Espacio.</p>
+        <div class="categorias" id="categorias" role="group" aria-label="Elige la categoría de la afirmación">
+          <button class="categoria" type="button" data-categoria="hecho"><span class="categoria-numero">01</span><span><strong>Hecho comprobable</strong><small>Se puede contrastar con una evidencia o fuente.</small></span></button>
+          <button class="categoria" type="button" data-categoria="opinion"><span class="categoria-numero">02</span><span><strong>Opinión subjetiva</strong><small>Expresa una preferencia o valoración personal.</small></span></button>
+          <button class="categoria" type="button" data-categoria="comercial"><span class="categoria-numero">03</span><span><strong>Suposición comercial</strong><small>Promete o crea una necesidad para vender.</small></span></button>
+          
+        </div>
+        <div class="respuesta-juego" id="respuesta-juego" role="status" aria-live="polite" hidden></div>
+        <button class="btn boton-siguiente" id="siguiente-tarjeta" type="button" hidden>Siguiente tarjeta ↗</button>
+        <div class="resultado-final" id="resultado-final" hidden>
+          <p class="sello-resultado">¡MENSAJES DESMONTADOS!</p>
+          <h3 id="resultado-titulo">Mirar también es pensar</h3>
+          <p id="resultado-mensaje"></p>
+          <button class="btn" id="reiniciar-juego" type="button">Volver a jugar ↻</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="clasificador" aria-labelledby="clasificador-titulo">
+      <div class="bloque-titulo"><span>HERRAMIENTA / 03</span><h2 id="clasificador-titulo">Prueba con otra frase</h2></div>
+      <p class="lab-intro">Escribe o pega un mensaje sobre apariencia, cuidado o bienestar. El análisis local buscará señales de lenguaje y te mostrará por qué sugiere una lectura.</p>
+      <form id="form-clasificador" class="form-clasificador">
+        <label for="texto-analizar">Frase para analizar</label>
+        <textarea id="texto-analizar" maxlength="500" rows="3" placeholder="Ej.: La rutina que todas necesitan para verse perfectas…" required></textarea>
+        <div class="form-acciones"><span id="contador-caracteres">0 / 500</span><button class="btn" type="submit">Buscar pistas ↗</button></div>
+      </form>
+      <div class="ejemplos-clasificador" aria-label="Frases de ejemplo">
+        <span>Prueba con:</span>
+        <button type="button" data-ejemplo="El filtro que necesitas para borrar cada imperfección">“el filtro que necesitas…”</button>
+        <button type="button" data-ejemplo="Todas deberíamos tener la misma silueta">“todas deberíamos…”</button>
+        <button type="button" data-ejemplo="Cuando ves sus fotos, tu vida parece menos interesante">“cuando ves sus fotos…”</button>
+      </div>
+      <div id="resultado-clasificador" class="resultado-clasificador" role="status" aria-live="polite" hidden></div>
+      <p class="nota-margen nota-inferior">Este prototipo usa reglas transparentes y palabras clave en tu navegador. No es un modelo de IA entrenado: puede pasar por alto sentidos, bromas, contexto cultural o frases nuevas. No evalúa personas ni diagnostica.</p>
+    </section>
+  </main>
+  <footer class="pie"><span>Proyecto educativo y preventivo. No diagnostica ni reemplaza atención profesional.</span><a href="recursos.html">Recursos y apoyo</a></footer>
+  <script src="js/lab.js" defer></script>
+<script src="js/kiosco.js" defer></script>
+</body>
+</html>
+
+
+

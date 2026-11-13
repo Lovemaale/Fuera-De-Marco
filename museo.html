@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#fbf0d6">
+  <meta name="description" content="Explora cómo cambian las imágenes y los ideales en el archivo cultural y las pantallas.">
+  <title>El museo de la belleza · FUERA DE MARCO</title>
+  <link rel="stylesheet" href="css/Style.css"><link rel="stylesheet" href="css/museo.css">
+</head>
+<body>
+  <a class="salto" href="#comparador">Saltar al comparador</a>
+  <nav class="nav" aria-label="Navegación principal"><a class="logo" href="index.html">FUERA DE MARCO</a><a href="feed.html">Feed</a><a class="activo" href="museo.html" aria-current="page">Museo</a><a href="cuerpo.html">Cuerpo</a><a href="foro.html">Foro</a><a href="laboratorio.html">Laboratorio</a><a href="espejo.html">Espejo</a><a href="recursos.html">Recursos</a><button class="nav-fullscreen" id="modo-exposicion" type="button" aria-label="Activar pantalla completa">Modo feria ⛶</button></nav>
+  <main class="contenido">
+    <header class="pagina-cabecera"><span class="kicker">Sala 02 · Archivo / Mirar el cambio</span><h1>El museo de la belleza</h1><p class="intro">Desliza para cambiar el encuadre. No existe una sola idea de belleza: las imágenes y las normas se construyen en contextos distintos.</p><span class="marca">MUEVE EL CONTROL · OBSERVA QUÉ CAMBIA</span></header>
+    <section class="comparador-epoca" id="comparador" aria-labelledby="comparador-titulo">
+      <div class="bloque-titulo"><span>INTERACCIÓN / 01</span><h2 id="comparador-titulo">Mueve la frontera del ideal</h2></div>
+      <div class="comparador-marco" id="comparador-marco" style="--corte:50%">
+        <img class="comparador-base" src="assets/arquitectura.jpg" alt="Collage floral sobre una arquitectura histórica, imagen artística de archivo">
+        <div class="comparador-capa"><img src="assets/estereotipos.jpg" alt="Ilustración de imágenes de belleza en pantallas contemporáneas"></div>
+        <span class="etiqueta-epoca etiqueta-archivo" id="etiqueta-archivo">ARCHIVO · IDEALES HEREDADOS</span><span class="etiqueta-epoca etiqueta-pantalla" id="etiqueta-pantalla">PANTALLA · IDEALES QUE CIRCULAN</span>
+        <span class="linea-corte" aria-hidden="true"></span>
+      </div>
+      <label class="control-tiempo" for="control-comparacion"><span>Archivo</span><input id="control-comparacion" type="range" min="0" max="100" value="50" aria-label="Desliza para comparar la imagen de archivo con la imagen de pantallas"><span>Pantalla</span></label>
+      <p class="texto-comparador" id="texto-comparador" aria-live="polite">Mitad y mitad: nota qué imagen reclama tu atención primero.</p>
+      <p class="nota-margen">Son collages artísticos para comparar encuadres, no anuncios históricos ni una línea del tiempo universal.</p>
+    </section>
+    <section id="recorrido" aria-label="Piezas interactivas del museo">
+      <div class="bloque-titulo"><span>ARCHIVO / 02</span><h2>Toca una pieza para abrir su ficha</h2></div>
+      <div class="galeria-fichas">
+        <button class="ficha-pieza" type="button" data-ficha="monumento" aria-expanded="false"><img src="assets/arquitectura.jpg" alt="Edificio clásico con flores de colores superpuestas"><span>PIEZA 01 · EL MARCO</span><strong>¿Quién decidió qué merecía permanecer?</strong></button>
+        <button class="ficha-pieza" type="button" data-ficha="pantallas" aria-expanded="false"><img src="assets/telefono.jpg" alt="Pantallas ilustradas en un espacio oscuro"><span>PIEZA 02 · LA CIRCULACIÓN</span><strong>¿Qué cambia cuando una imagen se repite?</strong></button>
+        <button class="ficha-pieza" type="button" data-ficha="miradas" aria-expanded="false"><img src="assets/cara%20dividida.png" alt="Rostro artístico con ojos e imágenes superpuestos"><span>PIEZA 03 · LA MIRADA</span><strong>¿Qué aprendimos a notar primero?</strong></button>
+      </div>
+      <div id="ficha-archivo" class="ficha-archivo" aria-live="polite" hidden></div>
+    </section>
+  </main>
+  <footer class="pie"><span>Proyecto educativo y preventivo. No diagnostica ni reemplaza atención profesional.</span><a href="recursos.html">Recursos de ayuda</a></footer>
+  <script src="js/museo.js" defer></script>
+<script src="js/kiosco.js" defer></script>
+</body>
+</html>
+
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#fbf0d6"><title>La conversación incómoda · FUERA DE MARCO</title><link rel="stylesheet" href="css/Style.css"><link rel="stylesheet" href="css/foro.css"></head>
+<body>
+  <a class="salto" href="#totem">Saltar al tótem de debate</a>
+  <nav class="nav" aria-label="Navegación principal"><a class="logo" href="index.html">FUERA DE MARCO</a><a href="feed.html">Feed</a><a href="museo.html">Museo</a><a href="cuerpo.html">Cuerpo</a><a class="activo" href="foro.html" aria-current="page">Foro</a><a href="laboratorio.html">Laboratorio</a><a href="espejo.html">Espejo</a><a href="recursos.html">Recursos</a><button class="nav-fullscreen" id="modo-exposicion" type="button" aria-label="Activar pantalla completa">Modo feria ⛶</button></nav>
+  <main class="contenido">
+    <header class="pagina-cabecera"><span class="kicker">Sala 04 · Voces / Tótem de debate</span><h1>La conversación incómoda</h1><p class="intro">Elige una postura provisional y mira qué argumentos ilumina. Puedes cambiar de opinión cuando escuches otra perspectiva.</p><span class="marca">NO HAY VOTO · NO GUARDAMOS RESPUESTAS</span></header>
+    <figure class="imagen-editorial"><img src="assets/boca.jpg" alt="Recorte artístico de una boca delineada en rosa intenso"><figcaption>Hacer una pregunta en voz alta puede abrir espacio a otras voces.<span>Archivo visual · palabra y escucha</span></figcaption></figure>
+    <section class="totem" id="totem" aria-labelledby="totem-title">
+      <div class="totem-cabecera"><span id="dilema-contador">DILEMA 01 / 03</span><span>elige con un toque</span></div>
+      <h2 id="totem-title" aria-live="polite">¿Cuándo el autocuidado se convierte en presión estética?</h2>
+      <div class="posturas" id="posturas" role="group" aria-label="Elige una perspectiva"></div>
+      <div class="resultado-postura" id="resultado-postura" aria-live="polite" hidden></div>
+      <button class="btn" id="siguiente-dilema" type="button">Siguiente dilema ↗</button>
+      <p class="nota-grafico">La barra ilustra una perspectiva, no representa votos ni datos de otras personas.</p>
+    </section>
+    <blockquote class="cita-gigante">Disentir no autoriza a humillar. Una conversación crítica también necesita cuidado.<cite>Pacto de esta sala</cite></blockquote>
+    <aside class="nota-margen">Esta actividad no publica respuestas ni registra posturas. Puedes cambiar de opinión, pasar una pregunta o cerrar la página en cualquier momento.</aside>
+  </main>
+  <footer class="pie"><span>Proyecto educativo y preventivo. No diagnostica ni reemplaza atención profesional.</span><a href="recursos.html">Recursos y apoyo</a></footer>
+  <script src="js/foro.js" defer></script>
+<script src="js/kiosco.js" defer></script>
+</body>
+</html>
+
+
