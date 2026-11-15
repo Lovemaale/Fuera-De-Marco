@@ -1,8 +1,18 @@
 const patterns = [
   {
     category: "Presión estética",
-    match: /\b(deber[ií]as|tienes que|necesitas|arreglar|corregir|perfect[oa]|mejor versi[oó]n)\b/i,
-    explanation: "El lenguaje sugiere que existe una apariencia que habría que alcanzar o corregir."
+    match: /\b(deber[ií]as|tienes que|necesitas|arreglar|corregir|perfect[oa]|mejor versi[oó]n|antes muerta|ser bella|ver estrellas|sencilla|sufrir para)\b/i,
+    explanation: "El lenguaje sugiere que existe una apariencia que habría que alcanzar o que el sacrificio es parte de lograrla."
+  },
+  {
+    category: "Desvalorización por apariencia",
+    match: /\b(mona|feo|fea|mal arreglad[oa])\b/i,
+    explanation: "La frase usa la apariencia para rebajar a alguien o hacerle sentir que necesita corregirse."
+  },
+  {
+    category: "Juicio social por apariencia",
+    match: /\b(como te ven|te tratan|primera impresi[oó]n|presentable)\b/i,
+    explanation: "El mensaje convierte el juicio ajeno por apariencia en una regla, en lugar de cuestionar ese prejuicio."
   },
   {
     category: "Comparación corporal",

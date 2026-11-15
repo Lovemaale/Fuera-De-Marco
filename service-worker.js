@@ -1,9 +1,20 @@
-const CACHE_NAME = "fuera-de-marco-v2";
+const CACHE_NAME = "fuera-de-marco-v4";
 const APP_SHELL = [
   "./",
   "./index.html",
   "./manifest.json",
   "./assets/icon.svg",
+  "./assets/arte.png",
+  "./assets/diversidad.jpg",
+  "./assets/@nina.entrena.jpg",
+  "./assets/@mesacotidiana.jpg",
+  "./assets/@pausabonita.jpg",
+  "./assets/@pieldecerca.jpg",
+  "./assets/@entendencia.jpg",
+  "./assets/canondebellezadelrenacimiento1.jpg",
+  "./assets/canondebellezadelosaños201.jpg",
+  "./assets/canondebellezadelosaños2000.jpg",
+  "./assets/actualidad.jpg",
   "./css/styles.css",
   "./js/app.js",
   "./js/data.js",
