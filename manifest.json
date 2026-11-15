@@ -1,0 +1,19 @@
+{
+  "name": "Fuera de Marco",
+  "short_name": "Fuera de Marco",
+  "description": "Revista interactiva sobre alfabetización mediática, percepción corporal e identidad.",
+  "lang": "es",
+  "start_url": "./#inicio",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f3eb",
+  "theme_color": "#f7f3eb",
+  "icons": [
+    {
+      "src": "./assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

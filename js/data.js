@@ -1,113 +1,146 @@
-// ===== DATOS DE FUERA DE MARCO =====
-// Todas las publicaciones son ficticias, creadas para el proyecto.
+export const modules = [
+  { id: "feed", number: "01", title: "El feed", subtitle: "Lo que vemos, lo que creemos", kind: "Explorar" },
+  { id: "imagen", number: "02", title: "Detrás de la imagen", subtitle: "Lo que no te muestran", kind: "Investigar" },
+  { id: "museo", number: "03", title: "El museo de la belleza", subtitle: "Una historia que cambia", kind: "Recorrer" },
+  { id: "discurso", number: "04", title: "Desmonta el discurso", subtitle: "¿Qué hay detrás de lo que dicen?", kind: "Analizar" },
+  { id: "conversacion", number: "05", title: "La conversación incómoda", subtitle: "Preguntas que merecen discutirse", kind: "Reflexionar" },
+  { id: "laboratorio", number: "06", title: "Laboratorio de pensamiento crítico", subtitle: "Pon a prueba lo que consumes", kind: "Experimentar" },
+  { id: "identidad", number: "07", title: "Más allá del espejo", subtitle: "Mi identidad no cabe en una fotografía", kind: "Crear" },
+  { id: "bienestar", number: "08", title: "Cuando la presión deja de ser estética", subtitle: "Comprender para reconocer", kind: "Acompañarse" }
+];
 
-const posts = [
+export const posts = [
   {
-    cuenta: "@vidaenbalance",
-    imagen: { src: "assets/amor.jpg", alt: "Collage de dos personas rodeadas de flores" },
-    tipo: "Bienestar",
-    color: "lavanda",
-    texto: "Si realmente te amas, nunca descuidarás tu cuerpo. Tu mejor versión comienza con disciplina.",
-    sesgo: "Valor condicionado: presenta el amor propio como premio por cumplir una rutina.",
-    idea: "Condiciona el amor propio a la apariencia y a la disciplina. Sugiere que cuidar tu cuerpo es una prueba de que te quieres.",
-    proceso: { nombre: "Esquemas y creencias", detalle: "La frase vincula el amor propio con disciplina y apariencia; al repetirse, una asociación aprendida puede sentirse como una regla." },
-    queNoSeVe: [
-      "La publicación es patrocinada por una marca de suplementos.",
-      "La foto es una de 40 tomadas ese día, con luz y ángulo elegidos.",
-      "No se mencionan salud, descanso, dinero ni tiempo disponible."
-    ],
-    preguntas: [
-      "¿Una persona que no sigue esa rutina se ama menos?",
-      "¿Quién define cuál es la «mejor versión» de alguien?",
-      "¿Qué gana la marca si sientes que te falta disciplina?"
-    ],
-    reformulacion: "Tu bienestar no tiene que convertirse en una obligación estética."
+    author: "Nina en movimiento", handle: "@nina.entrena", label: "Colaboración pagada · VitaForma",
+    category: "Fitness", time: "hace 12 min", visual: "sunrise",
+    caption: "Mi rutina de las 5:30 cambió mi vida. Si de verdad quieres, siempre encuentras tiempo.",
+    phrase: "Si de verdad quieres, siempre encuentras tiempo.",
+    hidden: ["Luz dorada y encuadre preparado para esta toma.", "Una experiencia personal se presenta como regla para todo el mundo.", "La relación comercial aparece en letra pequeña."]
   },
   {
-    cuenta: "@glowupdiario",
-    imagen: { src: "assets/arte.png", alt: "Retrato artístico con flores sobre el rostro" },
-    tipo: "Rutina de belleza",
-    color: "rosa",
-    texto: "Mi rutina de 12 pasos para una piel perfecta. Sin esto, no hay excusa para verte cansada.",
-    sesgo: "Comparación social: una selección editada se presenta como una expectativa cotidiana.",
-    idea: "Presenta la apariencia como una responsabilidad individual y trata el cansancio como un defecto que hay que corregir.",
-    proceso: { nombre: "Atención selectiva", detalle: "La promesa de piel perfecta concentra la mirada en un rasgo y deja fuera las variaciones normales de piel, salud y contexto." },
-    queNoSeVe: [
-      "Los 12 productos fueron enviados gratis por las marcas.",
-      "El video usa filtro de suavizado de piel.",
-      "No se muestra que la piel cambia por genética, clima y salud."
-    ],
-    preguntas: [
-      "¿Verse cansada es una falta o es parte de estar viva?",
-      "¿Cuántos de esos 12 pasos son necesarios y cuántos se venden?",
-      "¿Qué significa «perfecta» aquí y quién lo decidió?"
-    ],
-    reformulacion: "Cuidar tu piel puede ser un gusto, no un deber para verte descansada."
+    author: "Mesa de todos los días", handle: "@mesacotidiana", label: "Diario personal",
+    category: "Alimentación", time: "hace 38 min", visual: "table",
+    caption: "Lo que como en un día para sentirme con energía. Cada cuerpo y cada jornada tienen necesidades distintas.",
+    phrase: "Lo que como en un día me funciona a mí.",
+    hidden: ["Un día editado no cuenta toda una historia.", "La alimentación depende de muchos factores personales.", "La cámara muestra lo elegido, no lo que quedó fuera."]
   },
   {
-    cuenta: "@fit.con.proposito",
-    imagen: { src: "assets/estereotipos.jpg", alt: "Ilustración de ideales que circulan en pantallas" },
-    tipo: "Motivación",
-    color: "crema",
-    texto: "No existen excusas cuando quieres tu mejor versión. El cuerpo que sueñas está a una decisión.",
-    sesgo: "Esquema de mérito: supone que todos los cuerpos y circunstancias responden igual.",
-    idea: "Supone que todos los cuerpos cambian igual y que no lograrlo es falta de voluntad.",
-    proceso: { nombre: "Comparación social", detalle: "Presenta un cuerpo ideal como destino común y oculta las diferencias de genética, recursos, tiempo y circunstancias." },
-    queNoSeVe: [
-      "El cuerpo de la foto es parte del trabajo de la cuenta y de su negocio.",
-      "No aparecen la genética, el tiempo libre ni el acceso a recursos.",
-      "Se omiten las personas que lo intentaron y no obtuvieron ese resultado."
-    ],
-    preguntas: [
-      "¿Todos los cuerpos pueden llegar al mismo lugar?",
-      "Si alguien no lo logra, ¿la culpa es suya?",
-      "¿Quién se beneficia de que sientas que te falta voluntad?"
-    ],
-    reformulacion: "Tu cuerpo no es un proyecto pendiente."
+    author: "Pausa bonita", handle: "@pausabonita", label: "Rutina compartida",
+    category: "Autocuidado", time: "hace 1 h", visual: "bath",
+    caption: "Domingo de reset: mascarilla, velas y volver a ser mi mejor versión.",
+    phrase: "Cuidarme es convertirme en mi mejor versión.",
+    hidden: ["El autocuidado se vincula aquí con productos y apariencia.", "Descansar o pedir ayuda también puede ser cuidarse.", "La idea de una versión 'mejor' merece una pregunta."]
   },
   {
-    cuenta: "@modaparatodas",
-    imagen: { src: "assets/consumismo.jpg", alt: "Collage de un rostro rodeado de símbolos de redes y consumo" },
-    tipo: "Publicidad",
-    color: "lavanda",
-    texto: "Nueva colección: la talla que todas deberíamos querer. Corrige tu silueta con nuestra línea moldeadora.",
-    sesgo: "Norma universal: convierte una preferencia comercial en algo que supuestamente todas desean.",
-    idea: "Presenta el cuerpo como algo que necesita corrección y vende un producto como solución.",
-    proceso: { nombre: "Esquema de norma", detalle: "La publicidad convierte una preferencia de marca en una expectativa que supuestamente todas comparten." },
-    queNoSeVe: [
-      "El anuncio vende la inseguridad antes de vender la prenda.",
-      "Las modelos fueron editadas y el catálogo sigue ese patrón.",
-      "No se aclara que «la talla que todas deberíamos querer» es una opinión comercial."
-    ],
-    preguntas: [
-      "¿Qué cuerpos necesitan corrección y por qué?",
-      "¿Qué necesidad crea este anuncio y qué producto la resuelve?",
-      "¿Cómo cambiaría el mensaje si vendiera comodidad?"
-    ],
-    reformulacion: "La ropa debería ajustarse a tu cuerpo, no tu cuerpo a la ropa."
+    author: "Piel de cerca", handle: "@pieldecerca", label: "Publicidad · producto enviado",
+    category: "Belleza", time: "hace 2 h", visual: "skincare",
+    caption: "No sabía cuánto necesitaba este sérum hasta que lo probé. #ad escondido entre etiquetas.",
+    phrase: "No sabía cuánto necesitaba este producto.",
+    hidden: ["La publicación promociona un producto.", "La etiqueta publicitaria está poco visible.", "La sensación de necesitarlo puede formar parte del mensaje de venta."]
   },
   {
-    cuenta: "@mentebonita",
-    imagen: { src: "assets/emotividad.jpg", alt: "Collage artístico sobre emoción y mensajes" },
-    tipo: "Mensaje positivo",
-    color: "rosa",
-    texto: "Ámate todos los días. Si hoy no te ves hermosa, no estás haciendo el trabajo.",
-    sesgo: "Positividad obligatoria: convierte una emoción variable en otra tarea que cumplir.",
-    idea: "Parece positivo, pero exige amar el cuerpo siempre y convierte sentirse mal en un fracaso personal.",
-    proceso: { nombre: "Metacognición", detalle: "El mensaje convierte una emoción variable en una obligación. Podemos observar esa exigencia sin asumirla como verdad." },
-    queNoSeVe: [
-      "La cuenta vende un curso de autoestima de pago.",
-      "Se omite que respetar el cuerpo no obliga a amarlo todo el tiempo.",
-      "No hay contexto sobre días difíciles ni sobre la diversidad de experiencias."
-    ],
-    preguntas: [
-      "¿Un mensaje positivo puede reproducir una exigencia estética?",
-      "¿Es obligatorio amar tu cuerpo, o basta con respetarlo?",
-      "¿Qué pasa con quien no se siente así hoy?"
-    ],
-    reformulacion: "Puedes respetar tu cuerpo incluso en los días en que no te sientes cómoda con él."
+    author: "En tendencia", handle: "@entendencia", label: "Tendencia · #miantesyahora",
+    category: "Tendencias", time: "hace 4 h", visual: "mirror",
+    caption: "El mismo espejo, dos momentos distintos. ¿Cuál versión prefieres?",
+    phrase: "¿Cuál versión de mí prefieres?",
+    hidden: ["Una comparación invita a evaluar dos imágenes como si fueran la persona completa.", "Pose, ropa, luz y momento pueden cambiar la fotografía.", "La pregunta desplaza la atención hacia la aprobación externa."]
   }
 ];
 
-// Datos ficticios: cada pieza reúne imagen, lectura cognitiva y pistas para explorar.
+export const statements = [
+  "Si de verdad quieres, siempre encuentras tiempo.",
+  "Lo que como en un día me funciona a mí.",
+  "Cuidarme es convertirme en mi mejor versión.",
+  "No sabía cuánto necesitaba este producto.",
+  "¿Cuál versión de mí prefieres?"
+];
 
+export const eras = [
+  {
+    title: "Renacimiento Europeo", date: "Siglos XV–XVI", motif: "portrait",
+    context: "En algunos retratos de élite, la piel clara y los cuerpos de formas suaves podían comunicar estatus, acceso a recursos y distancia del trabajo manual. No existía un único ideal compartido por todas las comunidades.",
+    economy: "El arte de corte, el mecenazgo y la posición social influían en quién podía ser retratado y cómo se representaba."
+  },
+  {
+    title: "Años 20 · Flappers", date: "Década de 1920", motif: "jazz",
+    context: "La silueta recta y el cabello corto se asociaron en ciertos espacios urbanos con nuevas formas de vida y expresión. La moda también imponía normas y no describía la experiencia de todas las mujeres.",
+    economy: "Revistas, cine, publicidad y una industria de moda en expansión hicieron circular estilos a mayor velocidad."
+  },
+  {
+    title: "Años 90 · Heroin chic", date: "Década de 1990", motif: "editorial",
+    context: "Parte de la fotografía de moda popularizó una estética pálida, delgada y desaliñada. El estilo editorial no era una medida de salud, valor ni bienestar.",
+    economy: "La fotografía de alta moda y las revistas globales dieron visibilidad a imágenes que podían convertirse en aspiraciones de consumo."
+  },
+  {
+    title: "Era digital y filtros", date: "Presente", motif: "digital",
+    context: "Filtros, edición y recomendaciones algorítmicas hacen que imágenes muy producidas aparezcan junto a momentos cotidianos. Las plataformas no reflejan una muestra neutral del mundo.",
+    economy: "La atención, los datos y la publicidad financian muchas plataformas; la apariencia puede convertirse en una vía para vender productos."
+  }
+];
+
+export const scenes = [
+  {
+    title: "La portada de primavera", setting: "Editorial de moda ficticia",
+    description: "Una escena suave de estudio con flores, telas y una figura enmarcada.",
+    hotSpots: ["Iluminación y encuadre", "Retoque digital", "Selección de 1 foto entre 200", "Pose forzada"]
+  },
+  {
+    title: "La campaña de la mañana perfecta", setting: "Anuncio ficticio de cuidado personal",
+    description: "Una rutina cotidiana convertida en una escena impecable para promocionar una marca.",
+    hotSpots: ["Iluminación y encuadre", "Retoque digital", "Selección de 1 foto entre 200", "Estrategia de marketing"]
+  }
+];
+
+export const debates = [
+  {
+    question: "¿Cuándo el autocuidado se convierte en presión estética?",
+    sides: [
+      ["Puede ser difícil separar lo que deseo de lo que aprendí a desear.", "Preguntarse por el origen de una rutina puede ayudar a recuperar elección."],
+      ["Una práctica también puede dar placer o sentido sin tener que justificarse.", "La intención no siempre es fija; puede cambiar según el momento."]
+    ]
+  },
+  {
+    question: "¿Tenemos que amar nuestro cuerpo para respetarlo?",
+    sides: [
+      ["El respeto no debería depender de sentir entusiasmo por la propia apariencia.", "La neutralidad puede ser un lugar válido en días difíciles."],
+      ["Para algunas personas, cultivar aprecio ha sido una experiencia importante.", "No hay una emoción correcta ni una obligación de llegar a ella."]
+    ]
+  },
+  {
+    question: "¿Las redes reflejan lo que nos gusta o moldean lo que vemos?",
+    sides: [
+      ["Elegimos seguir cuentas, pero no controlamos todos los criterios de recomendación.", "Observar qué se repite puede revelar patrones que pasan inadvertidos."],
+      ["También podemos crear comunidades y encontrar referentes diversos.", "La agencia personal y el diseño de las plataformas pueden coexistir."]
+    ]
+  }
+];
+
+export const identityCards = [
+  { id: "intereses", title: "Lo que me da curiosidad", icon: "✿", prompts: ["Aprender algo nuevo", "Música / libros / arte"] },
+  { id: "habilidades", title: "Lo que sé hacer", icon: "✳", prompts: ["Escuchar con atención", "Resolver problemas"] },
+  { id: "valores", title: "Lo que quiero cuidar", icon: "♡", prompts: ["La honestidad", "La justicia"] },
+  { id: "experiencias", title: "Lo que he atravesado", icon: "❋", prompts: ["Un cambio importante", "Algo que me enseñó paciencia"] },
+  { id: "vinculos", title: "Con quién comparto", icon: "⌂", prompts: ["Amistades", "Personas que me acompañan"] },
+  { id: "proyectos", title: "Lo que imagino", icon: "✧", prompts: ["Un plan pequeño", "Algo que quiero construir"] }
+];
+
+export const scenarios = [
+  {
+    title: "La foto antes de salir",
+    text: "Alex revisa muchas veces una foto antes de publicarla y se inquieta si no recibe las reacciones que esperaba. En los últimos días ha dejado de juntarse con amistades para editar imágenes.",
+    answer: "señal",
+    feedback: "La preocupación empieza a interferir con vínculos y actividades. No permite concluir un diagnóstico, pero sí puede ser un motivo para conversar con alguien de confianza y buscar orientación profesional."
+  },
+  {
+    title: "Un cambio de estilo",
+    text: "Sam quiere probar un peinado distinto porque le gusta cómo se ve en una artista. Lo comenta con amistades y sigue participando en sus actividades habituales.",
+    answer: "contexto",
+    feedback: "Explorar un estilo no es por sí solo una señal de un problema. Importan el bienestar, la libertad de elección y el impacto que tiene en la vida cotidiana."
+  },
+  {
+    title: "Las reglas ocupan cada vez más espacio",
+    text: "Dani siente cada vez más ansiedad alrededor de la comida y el ejercicio, evita planes para seguir reglas estrictas y le cuesta concentrarse en otras cosas.",
+    answer: "señal",
+    feedback: "La ansiedad, las reglas rígidas y el impacto en la vida diaria merecen atención y apoyo profesional. No hace falta esperar a tener certeza o a que la situación empeore para pedir ayuda."
+  }
+];
