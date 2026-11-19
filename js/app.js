@@ -38,6 +38,24 @@ function escapeHTML(value = "") {
   })[char]);
 }
 
+function editorialDecor(tone = "rose") {
+  const stickerSets = {
+    sage: ["flormorado.png", "caracol.png", "moño.png", "chats.png", "estrella.png"],
+    rose: ["corazon.png", "moño.png", "ositosgominola.png", "camara.png", "pin.png"],
+    garden: ["ventana.png", "revista.png", "caracol.png", "descarga.png", "flormorado.png"],
+    gold: ["decorado.png", "pin.png", "moño.png", "camara.png", "estrella.png"],
+    lavender: ["chats.png", "espejo.png", "mensaje.png", "moño.png", "corazon.png"],
+    peach: ["mensaje.png", "ositosgominola.png", "flormorado.png", "moño.png", "corazon.png"],
+    teal: ["telefono.png", "chats.png", "camara.png", "caracol.png", "descarga.png"],
+    blue: ["ventana.png", "estrella.png", "pin.png", "revista.png", "corazon.png"],
+    wellbeing: ["corazon.png", "mensaje.png", "espejo.png", "decorado.png", "pin.png"]
+  };
+  const stickers = stickerSets[tone] || stickerSets.rose;
+  return `<div class="editorial-decor editorial-decor-${tone}" aria-hidden="true">
+    ${stickers.map((sticker, index) => `<img class="decor-sticker decor-sticker-${index + 1}" src="./assets/${sticker}" alt="" loading="lazy">`).join("")}
+  </div>`;
+}
+
 function moduleFor(id) {
   return modules.find((item) => item.id === id);
 }
@@ -61,6 +79,8 @@ function homePage() {
       ${state.visited.includes(item.id) ? '<span class="visited-mark" aria-label="Visitado">✿</span>' : ""}
     </a>`).join("");
   return `<section class="home-shell">
+    ${editorialDecor("sage")}
+    <aside class="source-note"><span aria-hidden="true">✳</span><p><strong>Nota sobre las imágenes.</strong> La mayoría de las fotografías proceden de Pinterest. Los créditos corresponden a sus usuarios y a los autores o autoras originales; si conoces una fuente faltante o quieres corregir una atribución, compártela para mejorar los créditos.</p></aside>
     <div class="hero">
       <div class="hero-copy">
         <p class="eyebrow"><span class="eyebrow-flower">✿</span> Un espacio para mirar con curiosidad</p>
@@ -72,6 +92,11 @@ function homePage() {
       <div class="hero-art">
         <img class="hero-image" src="./assets/arte.png" alt="Collage artístico de un rostro rodeado de flores." fetchpriority="high">
         <span class="art-sun"></span><span class="art-frame"></span><span class="art-figure"></span>
+        <div class="hero-collage-card hero-collage-left"><img src="./assets/amor.jpg" alt=""><span>recorte · mundo</span></div>
+        <div class="hero-collage-card hero-collage-right"><img src="./assets/amo.jpg" alt=""><span>recorte · identidad</span></div>
+        <img class="hero-extra-sticker hero-extra-flower" src="./assets/flormorado.png" alt="" aria-hidden="true">
+        <img class="hero-extra-sticker hero-extra-bow" src="./assets/moño.png" alt="" aria-hidden="true">
+        <img class="hero-extra-sticker hero-extra-snail" src="./assets/caracol.png" alt="" aria-hidden="true">
         <span class="art-flower flower-one">✿</span><span class="art-flower flower-two">❀</span>
         <span class="art-ribbon">mirar<br>también<br>se aprende</span>
         <span class="art-caption">una mirada<br>en construcción</span>
@@ -95,10 +120,7 @@ function homePage() {
       <figure><img src="./assets/revista.png" alt="Ilustración de una revista abierta." loading="lazy"><figcaption>la página elige qué mostrar</figcaption></figure>
       <figure><img src="./assets/telefono.jpg" alt="Teléfono móvil como símbolo de las imágenes cotidianas en pantalla." loading="lazy"><figcaption>la pantalla no es el mundo entero</figcaption></figure>
       <figure><img src="./assets/arteconceptual.png" alt="Ilustración conceptual para explorar las imágenes y la mirada." loading="lazy"><figcaption>mirar con curiosidad</figcaption></figure>
-      <figure><img src="./assets/ventana.png" alt="Ilustración de una ventana como marco visual." loading="lazy"><figcaption>¿qué queda fuera del marco?</figcaption></figure>
-      <figure><img src="./assets/espejo.png" alt="Ilustración de un espejo." loading="lazy"><figcaption>una imagen no define a nadie</figcaption></figure>
-      <figure><img src="./assets/marcoig.png" alt="Marco gráfico inspirado en una publicación de redes sociales." loading="lazy"><figcaption>publicar también es encuadrar</figcaption></figure>
-    </div><div class="sticker-shelf" aria-hidden="true"><img src="./assets/boton.png" alt="" loading="lazy"><img src="./assets/camara.png" alt="" loading="lazy"><img src="./assets/caracol.png" alt="" loading="lazy"><img src="./assets/chats.png" alt="" loading="lazy"><img src="./assets/corazon.png" alt="" loading="lazy"><img src="./assets/decorado.png" alt="" loading="lazy"><img src="./assets/descarga.png" alt="" loading="lazy"><img src="./assets/estrella.png" alt="" loading="lazy"><img src="./assets/mensaje.png" alt="" loading="lazy"><img src="./assets/moño.png" alt="" loading="lazy"><img src="./assets/ositosgominola.png" alt="" loading="lazy"><img src="./assets/pin.png" alt="" loading="lazy"></div></section>
+    </div><div class="sticker-shelf" aria-hidden="true"><img src="./assets/moño.png" alt="" loading="lazy"><img src="./assets/camara.png" alt="" loading="lazy"><img src="./assets/caracol.png" alt="" loading="lazy"><img src="./assets/chats.png" alt="" loading="lazy"><img src="./assets/corazon.png" alt="" loading="lazy"><img src="./assets/decorado.png" alt="" loading="lazy"><img src="./assets/descarga.png" alt="" loading="lazy"><img src="./assets/estrella.png" alt="" loading="lazy"><img src="./assets/mensaje.png" alt="" loading="lazy"><img src="./assets/ositosgominola.png" alt="" loading="lazy"><img src="./assets/pin.png" alt="" loading="lazy"></div></section>
     <section class="hub-section">
       <div class="section-title-row"><div><p class="eyebrow">La revista</p><h2>Ocho puertas.<br><em>Ningún orden obligatorio.</em></h2></div><span class="hand-note">elige por dónde<br>te da curiosidad ↘</span></div>
       <div class="module-grid">${cards}</div>
@@ -110,6 +132,7 @@ function homePage() {
 
 function feedPage() {
   return `<section class="page-shell">${moduleHeading("feed", "Explorar · 5 publicaciones")}
+    ${editorialDecor("rose")}
     <div class="page-intro"><p>Las publicaciones son ficticias. Mira el mensaje, nota qué te hace pensar y, si quieres, activa los rayos X.</p>
     <button class="button button-rose" type="button" data-action="toggle-xray" aria-pressed="false">Revelar lo oculto <span aria-hidden="true">✳</span></button></div>
     <div class="feed-layout"><aside class="margin-note"><span class="note-tape">para mirar</span><p>Una publicación es una selección. ¿Qué quedó fuera del encuadre?</p><p>Un feed puede repetir ideales y hacer que parezcan universales; eso no los vuelve saludables ni ciertos.</p><span class="note-spark">✧</span></aside>
@@ -132,14 +155,15 @@ function feedPage() {
 
 function imagePage() {
   return `<section class="page-shell">${moduleHeading("imagen", "Investigar · 2 escenas")}
+    ${editorialDecor("garden")}
     <p class="page-lede">Desliza para cambiar la escena y abre los detalles para descubrir decisiones detrás de una imagen. No se evalúan cuerpos: observamos cómo se producen imágenes.</p>
     <div class="scene-grid">${scenes.map((scene, index) => `
       <article class="scene-card paper-card">
         <div class="scene-art scene-art-${index + 1}" data-scene="${index}" data-view="after">
-          <div class="scene-before"></div><div class="scene-after"></div>
+          <div class="scene-before"></div><div class="scene-after"><img class="scene-photo" src="${escapeHTML(scene.image)}" alt="${escapeHTML(scene.imageAlt)}" loading="lazy" decoding="async"></div>
           <span class="scene-frame"></span><span class="scene-object">✿</span><span class="scene-sun">☼</span>
           <span class="scene-tag">${escapeHTML(scene.setting)}</span>
-          ${scene.hotSpots.map((_, spot) => `<button class="hotspot hotspot-${spot + 1}" type="button" aria-label="Inspeccionar ${escapeHTML(scene.hotSpots[spot])}" data-action="hotspot" data-scene="${index}" data-spot="${spot}">+</button>`).join("")}
+          ${scene.hotSpots.map((_, spot) => `<button class="hotspot hotspot-${spot + 1}" type="button" aria-label="Inspeccionar ${escapeHTML(scene.hotSpots[spot])}" aria-pressed="false" data-action="hotspot" data-scene="${index}" data-spot="${spot}">+</button>`).join("")}
           <span class="scene-state">${index === 0 ? "Selección final" : "Escena de campaña"}</span>
         </div>
         <div class="scene-controls"><label for="scene-range-${index}">Ver dos momentos</label><input id="scene-range-${index}" type="range" min="0" max="100" value="100" data-action="compare" data-scene="${index}" aria-label="Comparar escena original y final"><div class="range-labels"><span>Preparación</span><span>Imagen final</span></div></div>
@@ -152,6 +176,7 @@ function imagePage() {
 
 function museumPage() {
   return `<section class="page-shell">${moduleHeading("museo", "Recorrer · 4 salas")}
+    ${editorialDecor("gold")}
     <p class="page-lede">Los ideales no han sido iguales ni universales: cambian con la historia, la cultura y las relaciones de poder. Estas salas son pequeñas ventanas, no una historia completa.</p>
     <div class="museum-grid">${eras.map((era, index) => `
       <article class="museum-card paper-card">
@@ -214,6 +239,7 @@ function discoursePage() {
       <span class="quote-number">0${index + 1}</span><span>“${escapeHTML(statement.text)}”</span><span class="quote-arrow" aria-hidden="true">↗</span>
     </button>`).join("");
   return `<section class="page-shell">${moduleHeading("discurso", "Pausa · responde · descubre")}
+    ${editorialDecor("lavender")}
     <p class="page-lede">Estos refranes se repiten como si fueran verdades. Elige uno, nota qué te provoca y luego abre el contexto que suele quedar fuera. No hay respuestas correctas.</p>
     <div class="phrase-safety-note"><span aria-hidden="true">✿</span><p><strong>Antes de empezar:</strong> aquí aparecen expresiones que juzgan la apariencia y una hipérbole con la palabra “muerta”. Puedes saltarte cualquiera, cerrar la actividad o volver cuando quieras.</p></div>
     <div class="phrase-activity-layout">
@@ -239,6 +265,7 @@ function discoursePage() {
 function conversationPage() {
   const saved = state.reflections || {};
   return `<section class="page-shell">${moduleHeading("conversacion", "Reflexionar · 3 preguntas abiertas")}
+    ${editorialDecor("peach")}
     <p class="page-lede">No hay una postura que tengas que adoptar. Puedes explorar una idea, cambiar de opinión o dejar la pregunta abierta. Si alguien expresa angustia con la comida o su cuerpo, escuchar sin debatir su apariencia puede ayudar; no hace falta que demuestre estar “lo bastante mal” para merecer apoyo.</p>
     <aside class="conversation-art"><img src="./assets/emotividad.jpg" alt="Collage en blanco y negro de una persona abrazando una figura hecha con texto." loading="lazy"><p><span>✿</span> La experiencia de alguien no se ve completa desde afuera. Preguntar y escuchar con respeto puede abrir espacio para conversar.</p></aside>
     <div class="debate-list">${debates.map((debate, index) => `
@@ -257,6 +284,7 @@ function conversationPage() {
 
 function labPage() {
   return `<section class="page-shell">${moduleHeading("laboratorio", "Experimentar · 2 pruebas")}
+    ${editorialDecor("teal")}
     <div class="lab-grid">
       <article class="lab-card paper-card"><p class="eyebrow">Experimento 01 · Recomendaciones</p><h2>Lo que el algoritmo repite</h2><p>En esta simulación, cada vez que eliges un contenido similar, aparecen más publicaciones de ese tipo. No es un modelo de una plataforma real. La repetición puede hacer que una idea parezca normal o inevitable; puedes cambiar de tema, dejar de seguir una cuenta o tomar distancia.</p>
         <div class="algorithm-sim"><div class="sim-header"><span>tu feed simulado</span><span data-feed-count>0 señales</span></div><div class="sim-feed" data-sim-feed><div class="sim-post sim-original"><span>✿</span><p>Un consejo sobre apariencia</p><small>PUBLICACIÓN INICIAL</small></div><div class="sim-empty">Elige el contenido que mirarías para ver cómo se transforma el feed.</div></div></div>
@@ -280,6 +308,7 @@ function labPage() {
 function identityPage() {
   const selected = new Set(state.identity || []);
   return `<section class="page-shell">${moduleHeading("identidad", "Crear · retrato no estético")}
+    ${editorialDecor("blue")}
     <div class="identity-intro"><p>Elige las tarjetas que te representen hoy y añade tus propias palabras. No hace falta compartirlas con nadie. Tu identidad incluye vínculos, intereses, valores e historia: no cabe en un cuerpo ni en una foto.</p><span class="identity-doodle" aria-hidden="true">✿</span></div>
     <div class="identity-grid">${identityCards.map((card, index) => `
       <article class="identity-prompt prompt-${index + 1}"><span class="prompt-icon">${card.icon}</span><h2>${escapeHTML(card.title)}</h2>
@@ -294,6 +323,7 @@ function identityPage() {
 
 function wellbeingPage() {
   return `<section class="page-shell">${moduleHeading("bienestar", "Acompañarse · información y orientación")}
+    ${editorialDecor("wellbeing")}
     <div class="care-callout"><span class="callout-flower">✿</span><div><p class="eyebrow">Información para comprender</p><h2>Los TCA son problemas de salud complejos, no decisiones ni defectos personales.</h2><p>Una persona puede necesitar apoyo con cualquier cuerpo, edad, género o historia. No es posible reconocer o descartar un TCA por una fotografía, un peso o una sola conducta. Los pensamientos pueden sentirse insistentes y ocupar cada vez más espacio; por fuera no siempre se ve cuánto está sufriendo alguien. Con atención adecuada, la recuperación es posible.</p></div></div>
     <section class="factors-section"><p class="eyebrow">Una mirada amplia</p><h2>Los factores pueden interactuar.</h2><div class="factor-grid">
       <article><span>01</span><h3>Biológicos</h3><p>La genética, el desarrollo y distintos procesos físicos pueden influir. Ningún factor por sí solo explica todas las experiencias.</p></article>
@@ -325,6 +355,7 @@ function render() {
     saveState();
   }
   app.innerHTML = renderer();
+  document.body.dataset.page = pageRenderers[route] ? route : "inicio";
   nav.querySelectorAll("a").forEach((link) => {
     if (link.dataset.route === route) link.setAttribute("aria-current", "page");
     else link.removeAttribute("aria-current");
@@ -416,14 +447,12 @@ function handleClick(event) {
   if (action === "hotspot") {
     const { scene, spot } = button.dataset;
     const sceneInfo = scenes[Number(scene)];
-    const details = [
-      "La posición de la cámara, la luz y el fondo guían lo que se nota primero.",
-      "El retoque puede alterar textura, color u objetos de una escena; no revela una apariencia más verdadera.",
-      "En una sesión se producen muchas tomas y se selecciona una pequeña parte para publicar.",
-      "Una pose puede ser sostenida para la cámara y no representar una postura cotidiana.",
-      "La imagen puede formar parte de una estrategia para llamar la atención sobre una marca o una idea."
-    ];
+    const details = sceneInfo.details;
     const target = document.querySelector(`[data-hotspot-info="${scene}"]`);
+    button.closest(".scene-art").querySelectorAll(".hotspot").forEach((hotspot) => {
+      const selected = hotspot === button;
+      hotspot.setAttribute("aria-pressed", String(selected));
+    });
     target.innerHTML = `<strong>${escapeHTML(sceneInfo.hotSpots[Number(spot)])}</strong><br>${details[Number(spot)]}`;
   }
   if (action === "identity-prompt") {

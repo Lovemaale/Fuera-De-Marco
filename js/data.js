@@ -204,11 +204,27 @@ export const scenes = [
   {
     title: "La portada de primavera", setting: "Editorial de moda ficticia",
     description: "Una escena suave de estudio con flores, telas y una figura enmarcada.",
+    image: "./assets/La portada de primavera.jpg",
+    imageAlt: "Editorial visual de moda inspirada en primavera.",
+    details: [
+      "La posición de la cámara, la luz y el fondo guían lo que se nota primero.",
+      "El retoque puede alterar textura, color u objetos de una escena; no revela una apariencia más verdadera.",
+      "En una sesión se producen muchas tomas y se selecciona una pequeña parte para publicar.",
+      "Una pose puede ser sostenida para la cámara y no representar una postura cotidiana."
+    ],
     hotSpots: ["Iluminación y encuadre", "Retoque digital", "Selección de 1 foto entre 200", "Pose forzada"]
   },
   {
     title: "La campaña de la mañana perfecta", setting: "Anuncio ficticio de cuidado personal",
     description: "Una rutina cotidiana convertida en una escena impecable para promocionar una marca.",
+    image: "./assets/Anuncio ficticio de cuidado personal.jpg",
+    imageAlt: "Anuncio editorial ficticio de una rutina de cuidado personal.",
+    details: [
+      "La posición de la cámara, la luz y el fondo construyen una imagen de rutina fácil y ordenada.",
+      "El retoque puede mejorar piel, colores y objetos para que todo parezca uniforme.",
+      "La campaña elige una sola imagen entre muchas opciones para transmitir su mensaje.",
+      "Los anuncios usan una historia aspiracional para relacionar el cuidado personal con una marca."
+    ],
     hotSpots: ["Iluminación y encuadre", "Retoque digital", "Selección de 1 foto entre 200", "Estrategia de marketing"]
   }
 ];
