@@ -108,7 +108,7 @@ function homePage() {
       <p>Un recorrido abierto para explorar cómo se construyen las imágenes, las ideas y las expectativas. La apariencia no mide tu valor.</p>
       <span class="strip-note">sin ruta obligatoria · a tu ritmo</span>
     </div>
-    <aside class="digital-care-note"><p class="eyebrow">Una nota de cuidado</p><h2>No tienes que ganarte el respeto con tu apariencia.</h2><p>Los TCA son problemas de salud complejos; no son una elección, una moda ni falta de voluntad. Si este tema te toca de cerca, puedes saltarte cualquier parte y buscar apoyo a tu ritmo.</p><a href="#bienestar">Ver información y recursos de apoyo ↗</a></aside>
+    <aside class="tca-home-preview"><div><p class="eyebrow">Una guía para empezar · módulo 01</p><h2>Primero, ¿qué es un TCA?</h2><p>Conoce qué significan los trastornos de la conducta alimentaria y cómo se relacionan con el bienestar, la imagen corporal y los mensajes que nos rodean.</p><a class="button button-dark" href="#tca">Abrir la guía <span aria-hidden="true">↗</span></a></div><img src="./assets/espejo.png" alt="" aria-hidden="true" loading="lazy"></aside>
     <section class="home-image-story"><div class="home-image-copy"><p class="eyebrow">Una portada no cuenta toda una vida</p><h2>Hay más en ti que lo que cabe en el marco.</h2><p>Intereses, afectos, preguntas, recuerdos y formas de cuidar también construyen quién eres. Este recorrido mira las imágenes con curiosidad, sin convertir el cuerpo en una tarea.</p><a href="#identidad" class="text-button">Descubrir “Más allá del espejo” ↗</a></div><img src="./assets/diversidad.jpg" alt="Collage artístico de muchos rostros diferentes." loading="lazy"><img class="home-image-sticker" src="./assets/flormorado.png" alt="" aria-hidden="true" loading="lazy"></section>
     <section class="home-photo-wall" aria-labelledby="photo-wall-title"><div class="photo-wall-heading"><p class="eyebrow">Recortes del archivo</p><h2 id="photo-wall-title">Una imagen abre preguntas.<br><em>No dicta respuestas.</em></h2><p>Ideas, pantallas, espejos, afectos y mensajes forman parte del paisaje visual que miramos cada día.</p></div><div class="photo-wall-grid">
       <figure class="wall-wide"><img src="./assets/concepto general.jpg" alt="Collage ilustrado de una cabeza rodeada por iconos de redes, pantallas y mensajes." loading="lazy"><figcaption>lo que vemos también se diseña</figcaption></figure>
@@ -122,7 +122,7 @@ function homePage() {
       <figure><img src="./assets/arteconceptual.png" alt="Ilustración conceptual para explorar las imágenes y la mirada." loading="lazy"><figcaption>mirar con curiosidad</figcaption></figure>
     </div><div class="sticker-shelf" aria-hidden="true"><img src="./assets/moño.png" alt="" loading="lazy"><img src="./assets/camara.png" alt="" loading="lazy"><img src="./assets/caracol.png" alt="" loading="lazy"><img src="./assets/chats.png" alt="" loading="lazy"><img src="./assets/corazon.png" alt="" loading="lazy"><img src="./assets/decorado.png" alt="" loading="lazy"><img src="./assets/descarga.png" alt="" loading="lazy"><img src="./assets/estrella.png" alt="" loading="lazy"><img src="./assets/mensaje.png" alt="" loading="lazy"><img src="./assets/ositosgominola.png" alt="" loading="lazy"><img src="./assets/pin.png" alt="" loading="lazy"></div></section>
     <section class="hub-section">
-      <div class="section-title-row"><div><p class="eyebrow">La revista</p><h2>Ocho puertas.<br><em>Ningún orden obligatorio.</em></h2></div><span class="hand-note">elige por dónde<br>te da curiosidad ↘</span></div>
+      <div class="section-title-row"><div><p class="eyebrow">La revista</p><h2>Nueve puertas.<br><em>Ningún orden obligatorio.</em></h2></div><span class="hand-note">elige por dónde<br>te da curiosidad ↘</span></div>
       <div class="module-grid">${cards}</div>
       <p class="storage-notice" data-storage-notice aria-live="polite"></p>
     </section>
@@ -178,11 +178,20 @@ function museumPage() {
   return `<section class="page-shell">${moduleHeading("museo", "Recorrer · 4 salas")}
     ${editorialDecor("gold")}
     <p class="page-lede">Los ideales no han sido iguales ni universales: cambian con la historia, la cultura y las relaciones de poder. Estas salas son pequeñas ventanas, no una historia completa.</p>
+    <aside class="museum-inclusion-note"><span aria-hidden="true">✿</span><p>Las imágenes de mujeres siguen en este recorrido. Sumamos una referencia masculina por época para ampliar la mirada: ninguna de estas imágenes define un cuerpo correcto ni representa a todo el mundo.</p></aside>
     <div class="museum-grid">${eras.map((era, index) => `
       <article class="museum-card paper-card">
         <div class="museum-art museum-${era.motif}"><img class="museum-cover" src="${escapeHTML(era.cover)}" alt="${escapeHTML(era.coverAlt)}" loading="lazy" decoding="async"><span class="museum-number">0${index + 1}</span><span class="museum-art-note">archivo visual · ${escapeHTML(era.date)}</span></div>
         <div class="museum-gallery" aria-label="Más imágenes de ${escapeHTML(era.title)}">${era.images.map((image) => `<img src="${escapeHTML(image.src)}" alt="${escapeHTML(image.alt)}" loading="lazy" decoding="async">`).join("")}</div>
         <div class="museum-copy"><p class="eyebrow">Sala ${String(index + 1).padStart(2, "0")} · ${escapeHTML(era.date)}</p><h2>${escapeHTML(era.title)}</h2><p>${escapeHTML(era.context)}</p><div class="economy-note"><span>✿</span><p><strong>Contexto y circulación</strong><br>${escapeHTML(era.economy)}</p></div><a class="museum-source" href="${escapeHTML(era.source)}" target="_blank" rel="noopener noreferrer">${escapeHTML(era.sourceLabel)} ↗</a></div>
+        <aside class="museum-male-reference" aria-label="Referencia masculina: ${escapeHTML(era.maleReference.title)}">
+          <div class="museum-male-content">
+            <img src="${escapeHTML(era.maleReference.src)}" alt="${escapeHTML(era.maleReference.alt)}" loading="lazy" decoding="async">
+            <div class="museum-male-copy"><p class="eyebrow">Otra mirada · referentes masculinos</p><h3>${escapeHTML(era.maleReference.title)}</h3><p>${escapeHTML(era.maleReference.context)}</p>
+              <p class="museum-image-credit">Crédito: ${escapeHTML(era.maleReference.credit)} · <a href="${escapeHTML(era.maleReference.source)}" target="_blank" rel="noopener noreferrer">fuente</a> · <a href="${escapeHTML(era.maleReference.licenseUrl || era.maleReference.source)}" target="_blank" rel="noopener noreferrer">${escapeHTML(era.maleReference.license)}</a></p>
+            </div>
+          </div>
+        </aside>
         ${era.archiveImages ? `<aside class="museum-archive"><p class="eyebrow">${escapeHTML(era.archiveLabel)}</p><p>${escapeHTML(era.archiveText)}</p><div class="archive-gallery">${era.archiveImages.map((image) => `<img src="${escapeHTML(image.src)}" alt="${escapeHTML(image.alt)}" loading="lazy" decoding="async">`).join("")}</div></aside>` : ""}
       </article>`).join("")}</div>
     <p class="small-caveat">Las tendencias describen ciertos contextos documentados; no representan a todas las personas de una época o cultura. Un ideal estético cambia: no es una medida objetiva de salud ni de valor humano.</p>
@@ -321,6 +330,54 @@ function identityPage() {
   </section>`;
 }
 
+function tcaPage() {
+  return `<section class="page-shell">${moduleHeading("tca", "Comprender · una guía para empezar")}
+    ${editorialDecor("wellbeing")}
+    <section class="tca-overview paper-card">
+      <div class="tca-overview-copy"><p class="eyebrow"><span aria-hidden="true">✳</span> Antes de seguir, una pausa</p>
+        <h2>No siempre se ve.<br><em>Y aun así importa.</em></h2>
+        <p class="tca-lead"><strong>TCA</strong> significa <strong>trastornos de la conducta alimentaria</strong>: problemas de salud mental que pueden afectar de forma persistente la relación con la comida y el bienestar físico y emocional.</p>
+        <p>No son una elección, una moda ni una falla personal. No hace falta “parecer enferma” para merecer que te escuchen. Pueden atravesar a personas de cualquier cuerpo, edad o género, y no se reconocen por una foto, un peso o una conducta aislada.</p>
+        <button class="tca-next-link" type="button" data-action="scroll-tca-topics">Seguir leyendo <span aria-hidden="true">↓</span></button>
+      </div>
+      <figure class="tca-collage">
+        <span class="tca-collage-label">lo que vemos / lo que sentimos</span>
+        <img src="./assets/concepto general.jpg" alt="Collage de una cabeza con iconos de redes sociales en su interior." loading="lazy">
+        <figcaption>Una imagen nunca cuenta toda la historia.</figcaption>
+        <span class="tca-collage-sticker" aria-hidden="true">✿</span>
+      </figure>
+    </section>
+    <section class="tca-factors">
+      <div class="tca-section-heading"><p class="eyebrow">Cada historia es distinta · no hay una fórmula</p><h2>¿Qué puede influir?</h2><span class="tca-pencil-note">No es culpa de una sola cosa.</span></div>
+      <div class="factor-grid">
+        <article class="tca-factor-card"><span class="tca-factor-mark" aria-hidden="true">✳</span><span class="tca-factor-number">01 / CUERPO</span><h3>Lo biológico</h3><p>La genética, el desarrollo y otros procesos físicos pueden influir. No determinan por sí solos lo que vive una persona.</p></article>
+        <article class="tca-factor-card"><span class="tca-factor-mark" aria-hidden="true">♡</span><span class="tca-factor-number">02 / EXPERIENCIAS</span><h3>Lo que sentimos</h3><p>El estrés, el estado de ánimo, la autoexigencia y las vivencias personales pueden relacionarse de maneras distintas.</p></article>
+        <article class="tca-factor-card"><span class="tca-factor-mark" aria-hidden="true">✿</span><span class="tca-factor-number">03 / ENTORNO</span><h3>El mundo que nos rodea</h3><p>Las normas estéticas, la discriminación y los mensajes de medios y redes también forman parte del contexto, pero no explican por sí solos todos los TCA.</p></article>
+      </div>
+    </section>
+    <aside class="tca-handwritten-note"><span class="tca-note-tape">para guardar</span><span class="tca-note-flower" aria-hidden="true">✿</span><p>Si algo te preocupa, no tienes que encontrar las palabras perfectas para pedir compañía.</p><cite>— de persona a persona</cite></aside>
+    <section class="tca-topics" id="tca-ruta">
+      <div class="tca-section-heading"><p class="eyebrow">Recortes para seguir mirando</p><h2>La apariencia no cuenta toda la historia.</h2><span class="tca-pencil-note">Elige una puerta ↘</span></div>
+      <div class="tca-topic-grid">
+        <a href="#museo"><span class="tca-topic-index">01 · archivo</span><span class="tca-topic-icon" aria-hidden="true">✿</span><span><strong>Influencias estéticas</strong><small>Los ideales cambian con el tiempo, el lugar y quien los difunde.</small></span><span class="tca-topic-arrow" aria-hidden="true">↗</span></a>
+        <a href="#laboratorio"><span class="tca-topic-index">02 · preguntas</span><span class="tca-topic-icon" aria-hidden="true">✳</span><span><strong>Pensamiento crítico</strong><small>¿Quién creó este mensaje? ¿Qué quiere que sienta o compre?</small></span><span class="tca-topic-arrow" aria-hidden="true">↗</span></a>
+        <a href="#identidad"><span class="tca-topic-index">03 · identidad</span><span class="tca-topic-icon" aria-hidden="true">♡</span><span><strong>Autoimagen y autoestima</strong><small>Tu identidad, tus vínculos y tu valor no caben en una foto.</small></span><span class="tca-topic-arrow" aria-hidden="true">↗</span></a>
+        <a href="#feed"><span class="tca-topic-index">04 · pantalla</span><span class="tca-topic-icon" aria-hidden="true">⌁</span><span><strong>Redes sociales</strong><small>Filtros, selección y repetición cambian lo que parece cotidiano.</small></span><span class="tca-topic-arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+    <section class="tca-myths" id="tca-mitos-realidades">
+      <div class="tca-section-heading"><p class="eyebrow">Mitos y realidades · hablemos claro</p><h2>Hay ideas que hacen daño.<br><em>También podemos cuestionarlas.</em></h2></div>
+      <div class="tca-myth-grid">
+        <article><span class="tca-myth-number">01</span><p class="tca-myth-label">Se dice</p><h3>“Se nota por el cuerpo de alguien.”</h3><p><strong>En realidad:</strong> la apariencia no confirma ni descarta un TCA. No hay un solo tipo de cuerpo ni una sola historia.</p></article>
+        <article><span class="tca-myth-number">02</span><p class="tca-myth-label">Se dice</p><h3>“Es cuestión de voluntad.”</h3><p><strong>En realidad:</strong> son problemas de salud complejos, no una decisión ni una falla personal. Merecen comprensión y atención adecuada.</p></article>
+        <article><span class="tca-myth-number">03</span><p class="tca-myth-label">Se dice</p><h3>“Hay que esperar a que sea evidente para pedir ayuda.”</h3><p><strong>En realidad:</strong> si algo preocupa, se puede buscar orientación sin esperar a una crisis ni tener un diagnóstico.</p></article>
+      </div>
+      <p class="tca-source">Para más información: <a href="https://www.who.int/news-room/fact-sheets/detail/eating-disorders" target="_blank" rel="noopener noreferrer">Organización Mundial de la Salud · trastornos alimentarios ↗</a></p>
+    </section>
+    <aside class="tca-care-note"><span aria-hidden="true">✿</span><p>Este espacio es educativo, no clínico. Si algo de esto te preocupa, no tienes que resolverlo a solas: en <a href="#bienestar">Bienestar</a> encontrarás orientación y recursos.</p></aside>
+  </section>`;
+}
+
 function wellbeingPage() {
   return `<section class="page-shell">${moduleHeading("bienestar", "Acompañarse · información y orientación")}
     ${editorialDecor("wellbeing")}
@@ -342,7 +399,7 @@ function wellbeingPage() {
 }
 
 const pageRenderers = {
-  inicio: homePage, feed: feedPage, imagen: imagePage, museo: museumPage,
+  inicio: homePage, tca: tcaPage, feed: feedPage, imagen: imagePage, museo: museumPage,
   discurso: discoursePage, conversacion: conversationPage, laboratorio: labPage,
   identidad: identityPage, bienestar: wellbeingPage
 };
@@ -402,6 +459,9 @@ function handleClick(event) {
   if (!button) return;
   const { action } = button.dataset;
 
+  if (action === "scroll-tca-topics") {
+    document.querySelector("#tca-ruta")?.scrollIntoView({ behavior: "smooth" });
+  }
   if (action === "toggle-xray") {
     const expanded = button.getAttribute("aria-pressed") !== "true";
     button.setAttribute("aria-pressed", String(expanded));

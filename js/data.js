@@ -1,12 +1,13 @@
 export const modules = [
-  { id: "feed", number: "01", title: "El feed", subtitle: "Lo que vemos, lo que creemos", kind: "Explorar" },
-  { id: "imagen", number: "02", title: "Detrás de la imagen", subtitle: "Lo que no te muestran", kind: "Investigar" },
-  { id: "museo", number: "03", title: "El museo de la belleza", subtitle: "Una historia que cambia", kind: "Recorrer" },
-  { id: "discurso", number: "04", title: "Desmonta el discurso", subtitle: "¿Qué hay detrás de lo que dicen?", kind: "Analizar" },
-  { id: "conversacion", number: "05", title: "La conversación incómoda", subtitle: "Preguntas que merecen discutirse", kind: "Reflexionar" },
-  { id: "laboratorio", number: "06", title: "Laboratorio de pensamiento crítico", subtitle: "Pon a prueba lo que consumes", kind: "Experimentar" },
-  { id: "identidad", number: "07", title: "Más allá del espejo", subtitle: "Mi identidad no cabe en una fotografía", kind: "Crear" },
-  { id: "bienestar", number: "08", title: "Cuando la presión deja de ser estética", subtitle: "Comprender para reconocer", kind: "Acompañarse" }
+  { id: "tca", number: "01", title: "¿Qué es un TCA?", subtitle: "Una guía para empezar", kind: "Comprender" },
+  { id: "feed", number: "02", title: "El feed", subtitle: "Lo que vemos, lo que creemos", kind: "Explorar" },
+  { id: "imagen", number: "03", title: "Detrás de la imagen", subtitle: "Lo que no te muestran", kind: "Investigar" },
+  { id: "museo", number: "04", title: "El museo de la belleza", subtitle: "Una historia que cambia", kind: "Recorrer" },
+  { id: "discurso", number: "05", title: "Desmonta el discurso", subtitle: "¿Qué hay detrás de lo que dicen?", kind: "Analizar" },
+  { id: "conversacion", number: "06", title: "La conversación incómoda", subtitle: "Preguntas que merecen discutirse", kind: "Reflexionar" },
+  { id: "laboratorio", number: "07", title: "Laboratorio de pensamiento crítico", subtitle: "Pon a prueba lo que consumes", kind: "Experimentar" },
+  { id: "identidad", number: "08", title: "Más allá del espejo", subtitle: "Mi identidad no cabe en una fotografía", kind: "Crear" },
+  { id: "bienestar", number: "09", title: "Cuando la presión deja de ser estética", subtitle: "Comprender para reconocer", kind: "Acompañarse" }
 ];
 
 export const posts = [
@@ -145,6 +146,15 @@ export const eras = [
     images: [
       { src: "./assets/canondebellezadelrenacimiento12.avif", alt: "Retrato pictórico de una mujer con sombrero y vestido claro." }
     ],
+    maleReference: {
+      title: "El cuerpo como proporción",
+      src: "./assets/male-renacimiento-vitruvio.jpg",
+      alt: "El Hombre de Vitruvio de Leonardo da Vinci, dibujado dentro de un círculo y un cuadrado.",
+      context: "El dibujo de Leonardo da Vinci relaciona el cuerpo masculino con proporciones geométricas e ideas humanistas. Es un ideal de proporción de su época, no un retrato de toda la diversidad corporal.",
+      credit: "Leonardo da Vinci; fotografía de Luc Viatour",
+      source: "https://commons.wikimedia.org/wiki/File:Da_Vinci_Vitruve_Luc_Viatour.jpg",
+      license: "Dominio público"
+    },
     context: "En algunos textos y retratos de élite de la Italia renacentista se elogiaban rasgos como el cabello claro y la piel pálida; ciertas prácticas de arreglo buscaban acercarse a esas convenciones. Es un registro parcial de círculos específicos, no un ideal único para todas las mujeres, regiones o clases sociales.",
     economy: "Los retratos de corte, el mecenazgo y los matrimonios entre familias influyentes condicionaban quién aparecía en las imágenes y cómo se presentaba. La pintura muestra convenciones y encargos, no la apariencia cotidiana de toda una población.",
     archiveLabel: "Retratos de otras épocas · una comparación aparte",
@@ -163,6 +173,15 @@ export const eras = [
       { src: "./assets/canondebellezadelosaños203.jpg", alt: "Dos mujeres con sombreros cloche y vestidos de los años veinte." },
       { src: "./assets/canondebellezadelosaños205.jpg", alt: "Grupo de bailarinas en una escena callejera de estilo años veinte." }
     ],
+    maleReference: {
+      title: "Elegancia de estudio",
+      src: "./assets/male-anos-20-bojan.jpg",
+      alt: "Retrato de estudio de Bojan Smerkolj en los años veinte, con traje formal y cabello peinado.",
+      context: "El retrato de Bojan Smerkolj muestra una imagen cuidada con traje, cabello peinado y pose de estudio. Es una convención de presentación masculina en retratos formales, no una expectativa compartida por todos.",
+      credit: "Fotografía de Veličan Bešter",
+      source: "https://commons.wikimedia.org/wiki/File:Bojan_Smerkolj_1920s.jpg",
+      license: "Dominio público"
+    },
     context: "En la moda urbana y mediática de los años veinte se difundieron vestidos más rectos, cinturas bajas, faldas más cortas y cortes de cabello breves. La silueta flapper fue una moda visible y cambiante, no una forma de cuerpo que todas tuvieran ni un ideal universal.",
     economy: "Revistas, ilustraciones de moda, cine y tiendas por departamentos aceleraron la circulación de estilos. El acceso a la ropa y la posibilidad de adoptar estas modas dependían de clase, edad, lugar y contexto racial."
   },
@@ -170,6 +189,16 @@ export const eras = [
     title: "Los años 2000 · cultura pop y moda", date: "2000–2009", motif: "editorial", source: "https://fashionhistory.fitnyc.edu/2000-2009/", sourceLabel: "FIT · moda de 2000–2009",
     cover: "./assets/canondebellezadelosaños2000.jpg", coverAlt: "Grupo de modelos en una presentación de moda de los años 2000.",
     images: [],
+    maleReference: {
+      title: "Pasarela Ed Hardy, 2008",
+      src: "./assets/male-anos-2000-ed-hardy.jpg",
+      alt: "Modelos masculinos en una pasarela de Ed Hardy en 2008, con estampados coloridos y accesorios.",
+      context: "En esta pasarela aparece un torso masculino expuesto junto con estampados llamativos y accesorios. Es una estética específica de moda urbana y pasarela, no un estándar compartido por todas las personas.",
+      credit: "Glenn Francis / Toglenn; miniatura redimensionada",
+      source: "https://commons.wikimedia.org/wiki/File:Ed_Hardy_Runway_Models.jpg",
+      license: "CC BY-SA 3.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/"
+    },
     context: "En la cultura pop y la moda comercial de comienzos de los 2000 se hicieron visibles los jeans de tiro bajo, las camisetas cortas y la exposición del abdomen. La moda cambió dentro de la década; estas prendas son tendencias, no un canon de belleza compartido por todas las personas.",
     economy: "La celebridad, la televisión, la música y las revistas conectaron la moda con el consumo masivo. Las marcas y tallas disponibles también podían excluir a quienes no encajaban en la silueta que promocionaban.",
     archiveLabel: "Una antesala visual: imágenes de moda de los años noventa",
@@ -195,6 +224,16 @@ export const eras = [
       { src: "./assets/actualidad9090.jpg", alt: "Autorretrato cotidiano frente a un espejo en una plataforma digital." },
       { src: "./assets/actualidad9q0.jpg", alt: "Fotografía cotidiana compartida en redes sociales." }
     ],
+    maleReference: {
+      title: "Una propuesta de pasarela, 2024",
+      src: "./assets/male-presente-fashion-show.jpg",
+      alt: "Modelo masculino en un desfile estudiantil de moda de 2024, con un conjunto experimental.",
+      context: "En este desfile estudiantil de 2024, el diseño masculino combina una silueta estilizada con ropa experimental. Es una propuesta entre muchas, no una expectativa para todos los cuerpos o identidades.",
+      credit: "COD Newsroom; miniatura redimensionada",
+      source: "https://commons.wikimedia.org/wiki/File:College_of_DuPage_CODe_Fashion_Show_2024_-_53718908226.jpg",
+      license: "CC BY 2.0",
+      licenseUrl: "https://creativecommons.org/licenses/by/2.0/"
+    },
     context: "Hoy conviven más cuerpos, estilos e identidades en algunas pantallas, pero la representación sigue siendo desigual. Filtros, retoques y sistemas de recomendación pueden hacer que imágenes muy producidas parezcan cotidianas; lo que se vuelve visible no es una muestra neutral de la sociedad.",
     economy: "La atención, los datos y la publicidad sostienen muchas plataformas. La apariencia puede usarse para captar vistas, vender productos o mantener a las personas comparándose; la repetición no convierte un ideal en una verdad."
   }

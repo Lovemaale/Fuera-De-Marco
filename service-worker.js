@@ -1,4 +1,4 @@
-const CACHE_NAME = "fuera-de-marco-v10";
+const CACHE_NAME = "fuera-de-marco-v13";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -35,6 +35,10 @@ const APP_SHELL = [
   "./assets/canondebellezadelosaños201.jpg",
   "./assets/canondebellezadelosaños2000.jpg",
   "./assets/actualidad.jpg",
+  "./assets/male-renacimiento-vitruvio.jpg",
+  "./assets/male-anos-20-bojan.jpg",
+  "./assets/male-anos-2000-ed-hardy.jpg",
+  "./assets/male-presente-fashion-show.jpg",
   "./css/styles.css",
   "./js/app.js",
   "./js/data.js",
